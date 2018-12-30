@@ -1,0 +1,91 @@
+{% extends 'erp/layout.html.twig' %}
+
+  {% block contentHeader %}
+    <section class="content-header">
+    <h1>
+        Direction Commerciale
+        <small>Liste des Commerciaux</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fas fa-briefcase"></i> Commerciaux</a></li>
+        <li class="active">Liste</li>
+    </ol>
+    </section>
+ {% endblock %}
+
+{% block content %}
+    <div class="box">
+        <div class="box-header">
+            <h3 class="box-title">
+                <div class="btn-group">
+                    <a href="{{ path('ajouter-commerciaux') }}"><button type="button" class="btn btn-block btn-default"><i class="fas fa-users"></i> Ajouter Commerciaux</button></a>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-block btn-info">Imprimer</button>
+                </div>
+            </h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+           <table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
+                            <thead>
+                            <tr role="row">
+                                <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="N°: activate to sort column descending" style="width: 169px;">N°</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Image: activate to sort column ascending" style="width: 208px;">Image</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Code: activate to sort column ascending" style="width: 208px;">Code</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Nom: activate to sort column ascending" style="width: 185px;">Nom</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Prenom: activate to sort column ascending" style="width: 104px;">Prénom</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Sexe: activate to sort column ascending" style="width: 104px;">Sexe</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Téléphone: activate to sort column ascending" style="width: 104px;">Téléphone</th>
+                            </tr>
+                            </thead>
+                            {% for commercial in commercials %}
+                                <tr>
+                                    <td>{{ loop.index }}</td>
+                                    {% if commercial.image %}
+                                    <td><a href="{{ path('information-commerciaux', {'slug': commercial.slug}) }}"><img src="{{ vich_uploader_asset(commercial, 'imageFile') }}" alt="..." width="50" class="img-thumbnail"></a></td>
+                                    {% else %}
+                                        <td><img src="{{ asset('images/no-image-icon.png') }}" width="50" height="50" class="img-fluid" alt="Responsive image"></td>
+                                    {% endif %}
+                                    <td><a href="{{ path('information-commerciaux', {'slug': commercial.slug}) }}">{{ commercial.code }}</a></td>
+                                    <td><a href="{{ path('information-commerciaux', {'slug': commercial.slug}) }}">{{ commercial.nom }}</a></td>
+                                    <td><a href="{{ path('information-commerciaux', {'slug': commercial.slug}) }}">{{ commercial.prenom }}</a></td>
+                                    <td>{{ commercial.sexe }}</td>
+                                    <td>{{ commercial.telephone }}</td>
+                                </tr>
+                            {% endfor %}
+                        </table></div>
+        </div>
+        <!-- /.box-body -->
+    </div>
+{% endblock %}
+    {% block javascripts %}
+        <script>
+            $(function () {
+                $('#example1').DataTable({
+                    language: {
+                        processing:     "Traitement en cours...",
+                        search:         "Rechercher&nbsp;:",
+                        lengthMenu:    "Afficher _MENU_ &eacute;l&eacute;ments",
+                        info:           "Affichage de l'&eacute;lement _START_ &agrave; _END_ sur _TOTAL_ &eacute;l&eacute;ments",
+                        infoEmpty:      "Affichage de l'&eacute;lement 0 &agrave; 0 sur 0 &eacute;l&eacute;ments",
+                        infoFiltered:   "(filtr&eacute; de _MAX_ &eacute;l&eacute;ments au total)",
+                        infoPostFix:    "",
+                        loadingRecords: "Chargement en cours...",
+                        zeroRecords:    "Aucun &eacute;l&eacute;ment &agrave; afficher",
+                        emptyTable:     "Aucune donnée disponible dans le tableau",
+                        paginate: {
+                            first:      "Premier",
+                            previous:   "Pr&eacute;c&eacute;dent",
+                            next:       "Suivant",
+                            last:       "Dernier"
+                        },
+                        aria: {
+                            sortAscending:  ": activer pour trier la colonne par ordre croissant",
+                            sortDescending: ": activer pour trier la colonne par ordre décroissant"
+                        }
+                    }
+                })
+            })
+        </script>
+    {% endblock %}

@@ -1,0 +1,64 @@
+{% extends 'erp/layout.html.twig' %}
+
+  {% block contentHeader %}
+    <section class="content-header">
+    <h1>
+        Direction Commerciale
+        <small>Liste des Quartiers</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fas fa-briefcase"></i> Quartiers</a></li>
+        <li class="active">Lister</li>
+    </ol>
+    </section>
+ {% endblock %}
+
+{% block content %}
+<section class="content">
+    <div class="box">
+        <div class="box-header">
+            <h3 class="box-title">
+                <div class="btn-group">
+                    <a href="{{ path('ward_create') }}"><button type="button" class="btn btn-block btn-success"><i class="fas fa-users"></i> Créer</button></a>
+                </div>
+                <div class="btn-group">
+                    <form action="#" method="post" data-confirmation="true">
+                        <button type="submit" class="btn btn-info">Imprimer</button>
+                    </form>
+                </div>
+            </h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+            <div class="row">
+                <div class="col-sm-8">
+                    {{ include('components/flash_messages.html.twig') }}
+                </div>
+            </div>
+           <table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
+                            <thead>
+                            <tr role="row">
+                                <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="N°: activate to sort column descending" style="width: 10px;">N°</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Code: activate to sort column ascending" style="width: 10px;">Code</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Nom: activate to sort column ascending" style="width: 10px;">Nom</th>
+                                <th style="width: 2px;">Action</th>
+                            </tr>
+                            </thead>
+                            {% for ward in wards %}
+                                <tr>
+                                    <td>{{ loop.index }}</td>
+                                    <td>{{ ward.code }}</td>
+                                    <td>{{ ward.name }}</td>
+                                    <td>
+                                        <form action="{{ url('ward_update', {'slug': ward.slug}) }}">
+                                            <button class="btn btn-warning">Modifier</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </table></div>
+        </div>
+        <!-- /.box-body -->
+    </div>
+    </section>
+{% endblock %}

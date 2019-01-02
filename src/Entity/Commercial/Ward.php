@@ -2,8 +2,6 @@
 
 namespace App\Entity\Commercial;
 
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -11,11 +9,11 @@ use Gedmo\Timestampable\Traits\TimestampableEntity;
 use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\Commercial\TownshipRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\Commercial\WardRepository")
  * @UniqueEntity("code")
  * @UniqueEntity("name")
  */
-class Township
+class Ward
 {
     /**
      * Hook timestampable behavior
@@ -50,14 +48,10 @@ class Township
     private $slug;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Commercial\Ward", mappedBy="township")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Commercial\Township", inversedBy="wards")
+     * @ORM\JoinColumn(nullable=false)
      */
-    private $wards;
-
-    public function __construct()
-    {
-        $this->wards = new ArrayCollection();
-    }
+    private $township;
 
     public function getId(): ?int
     {
@@ -96,33 +90,14 @@ class Township
         return $this->slug;
     }
 
-    /**
-     * @return Collection|Ward[]
-     */
-    public function getWards(): Collection
+    public function getTownship(): ?Township
     {
-        return $this->wards;
+        return $this->township;
     }
 
-    public function addWard(Ward $ward): self
+    public function setTownship(?Township $township): self
     {
-        if (!$this->wards->contains($ward)) {
-            $this->wards[] = $ward;
-            $ward->setTownship($this);
-        }
-
-        return $this;
-    }
-
-    public function removeWard(Ward $ward): self
-    {
-        if ($this->wards->contains($ward)) {
-            $this->wards->removeElement($ward);
-            // set the owning side to null (unless already changed)
-            if ($ward->getTownship() === $this) {
-                $ward->setTownship(null);
-            }
-        }
+        $this->township = $township;
 
         return $this;
     }

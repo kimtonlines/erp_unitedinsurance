@@ -110,7 +110,7 @@ class TownshipController extends AbstractController
             $em = $this->getDoctrine()->getManager();
             $em->remove($township);
             $em->flush();
-            $this->addFlash('danger', "Commune ".$township->getCode()." supprimé!");
+            $this->addFlash('danger', "Commune ".$township->getCode()." supprimée!");
         }
 
         return $this->redirectToRoute('township_read');

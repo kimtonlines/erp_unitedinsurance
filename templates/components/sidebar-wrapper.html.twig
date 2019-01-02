@@ -7,10 +7,10 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="{{ asset('adminlte/dist/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
+                <img src="{{ asset('images/no-image-icon.png') }}" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-                <p>Alexander Pierce</p>
+                <p>Kimt X</p>
                 <!-- Status -->
                 <a href="#"><i class="fa fa-circle text-success"></i> Connecté</a>
             </div>
@@ -32,7 +32,7 @@
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">MENU</li>
             <!-- Optionally, you can add icons to the links -->
-            <li class="active"><a href="#"><i class="fas fa-chart-line"></i> <span>Tableau de bord</span></a></li>
+            <li class="active"><a href="{{ path('dashborad') }}"><i class="fas fa-chart-line"></i> <span>Tableau de bord</span></a></li>
             <li class="treeview">
                 <a href="#"><i class="fas fa-briefcase"></i> <span>Direction Commerciale</span>
                     <span class="pull-right-container">
@@ -41,9 +41,19 @@
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="{{ path('liste-commerciaux') }}"><i class="fas fa-users"></i> <span>Commerciaux</span></a></li>
-                    <li><a href="#"><i class="fas fa-id-card-alt"></i> <span>Fiches de prospections</span></a></li>
-                    <li><a href="#"><i class="fas fa-address-book"></i></i> <span>Prospects</span></a></li>
-                    <li><a href="#"><i class="fas fa-sliders-h"></i></i> <span>Réglage</span></a></li>
+                    <li><a href="{{ path('prospecting_sheet_read') }}"><i class="fas fa-id-card-alt"></i> <span>Fiches de prospections</span></a></li>
+                    <li><a href="#"><i class="fas fa-address-book"></i> <span>Prospects</span></a></li>
+                    <li class="treeview">
+                        <a href="#"><i class="fas fa-sliders-h"></i> <span>Paramètrage</span>
+                            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="{{ path('prospecting_type_read') }}"><i class="fas fa-address-card"></i> <span>Type Prospection</span></a></li>
+                            <li><a href="{{ path('type_contract_read') }}"><i class="fas fa-briefcase"></i> <span>Type Contrat</span></a></li>
+                        </ul>
+                    </li>
                 </ul>
             </li>
         </ul>

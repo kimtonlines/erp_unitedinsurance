@@ -6,6 +6,7 @@
         "ext-ctype": "*",
         "ext-iconv": "*",
         "knplabs/knp-paginator-bundle": "^2.8",
+        "knplabs/knp-snappy-bundle": "^1.6",
         "mikehaertl/phpwkhtmltopdf": "^2.3",
         "sensio/framework-extra-bundle": "^5.1",
         "stof/doctrine-extensions-bundle": "^1.3",

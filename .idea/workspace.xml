@@ -3,14 +3,30 @@
   <component name="ChangeListManager">
     <list default="true" id="fb6a74da-4c1e-4ef2-b637-be823695d450" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/erp_unitedinsurance.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/erp_unitedinsurance.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/symfony2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/direction_commerciale/commercials/5c27f64d91f8b417181067.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/direction_commerciale/commercials/5c28138f1033d912011556.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/direction_commerciale/commercials/5c2815a3737aa530931815.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Commercial/CommercialController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Commercial/CommercialController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ErpController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ErpController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Commercial/Commercial.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Commercial/Commercial.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/CommercialType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/Commercial/CommercialType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20181229184438.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/CommercialRepository.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/components/main-header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/main-header.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/components/sidebar-wrapper.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/sidebar-wrapper.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/erp/dashborad.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/erp/dashborad.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/erp/direction_commerciale/commerciaux/ajouter-commerciaux.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/erp/direction_commerciale/commerciaux/enregistrer.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/erp/direction_commerciale/commerciaux/infomation-update-commerciaux.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/erp/direction_commerciale/commerciaux/infomation-update-commerciaux.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/erp/direction_commerciale/commerciaux/liste-commerciaux.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/erp/direction_commerciale/commerciaux/lister.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,61 +37,78 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/ErpController.php">
+        <entry file="file://$PROJECT_DIR$/src/Controller/Commercial/TypeContractController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="25" column="20" lean-forward="true" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/Commercial/CommercialController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="74" column="67" lean-forward="true" selection-start-line="74" selection-start-column="67" selection-end-line="74" selection-end-column="67" />
+            <state relative-caret-position="-154">
+              <caret line="56" column="33" selection-start-line="56" selection-start-column="33" selection-end-line="56" selection-end-column="33" />
               <folding>
-                <element signature="e#125#162#0#PHP" expanded="true" />
-                <element signature="e#1933#2000#0#PHP" expanded="true" />
-                <element signature="e#2665#2690#0#PHP" expanded="true" />
-                <element signature="e#2778#2857#0#PHP" expanded="true" />
+                <element signature="e#45#84#0#PHP" expanded="true" />
+                <element signature="e#2686#2708#0#PHP" expanded="true" />
+                <element signature="e#2836#2901#0#PHP" expanded="true" />
+                <element signature="e#2834#2890#0#PHP" expanded="true" />
+                <element signature="e#3787#3807#1#PHP" expanded="true" />
+                <element signature="e#4191#4211#1#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/erp/direction_commerciale/commerciaux/infomation-update-commerciaux.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="399" column="15" selection-start-line="399" selection-start-column="15" selection-end-line="399" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/erp/direction_commerciale/commerciaux/liste-commerciaux.html.twig">
+        <entry file="file://$PROJECT_DIR$/templates/erp/direction_commerciale/type_contract/read.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="51" column="138" selection-start-line="51" selection-start-column="138" selection-end-line="51" selection-end-column="138" />
+            <state relative-caret-position="309">
+              <caret line="74" column="135" selection-start-line="74" selection-start-column="135" selection-end-line="74" selection-end-column="135" />
               <folding>
-                <element signature="e#2982#3005#0#Twig" expanded="true" />
-                <element signature="e#3471#3494#0#Twig" expanded="true" />
-                <element signature="e#3618#3641#0#Twig" expanded="true" />
-                <element signature="e#3764#3787#0#Twig" expanded="true" />
+                <element signature="e#611#630#0#Twig" expanded="true" />
+                <element signature="e#4867#4887#0#Twig" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/erp/direction_commerciale/commerciaux/ajouter-commerciaux.html.twig">
+        <entry file="file://$PROJECT_DIR$/templates/erp/direction_commerciale/type_contract/create_update.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="103" column="1" lean-forward="true" selection-start-line="103" selection-start-column="1" selection-end-line="105" selection-end-column="16" />
+            <state relative-caret-position="906">
+              <caret line="84" column="90" selection-start-line="84" selection-start-column="90" selection-end-line="84" selection-end-column="90" />
+              <folding>
+                <element signature="e#784#802#0#Twig" expanded="true" />
+                <element signature="e#1061#1084#0#Twig" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#label#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#4495#4515#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/Commercial/TypeProspectionController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="65">
+              <caret line="97" column="98" lean-forward="true" selection-start-line="97" selection-start-column="7" selection-end-line="97" selection-end-column="98" />
+              <folding>
+                <element signature="e#45#87#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -89,7 +122,32 @@
       <find>Page</find>
       <find>sale</find>
       <find>Recent</find>
+      <find>activity</find>
+      <find>date</find>
+      <find>sett</find>
+      <find>Sheet</find>
+      <find>commerciaux</find>
+      <find>commercial</find>
+      <find>TypeProspectionType</find>
+      <find>prospecting_type</find>
+      <find>prospectingType</find>
+      <find>tpProspection</find>
+      <find>typeProspectionId</find>
+      <find>Prospection</find>
+      <find>typeContrat</find>
     </findStrings>
+    <replaceStrings>
+      <replace>prospectingSheet</replace>
+      <replace>Type</replace>
+      <replace>prospectingType</replace>
+      <replace>TypeProspection</replace>
+      <replace>type_prospection</replace>
+      <replace>typeProspection</replace>
+      <replace>typeContractId</replace>
+      <replace>Contart</replace>
+      <replace>Contrat</replace>
+      <replace>typeContract</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -97,33 +155,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/components/sidebar-wrapper.html.twig" />
-        <option value="$PROJECT_DIR$/templates/components/content-wrapper.html.twig" />
-        <option value="$PROJECT_DIR$/src/Controller/Direction_Commerciale/Commercial.php" />
-        <option value="$PROJECT_DIR$/templates/erp/direction-commerciale/commerciaux/liste-commerciaux.html.twig" />
-        <option value="$PROJECT_DIR$/templates/components/main-footer.html.twig" />
-        <option value="$PROJECT_DIR$/templates/components/main-header.html.twig" />
-        <option value="$PROJECT_DIR$/src/Controller/Direction_Commerciale/CommercialController.php" />
-        <option value="$PROJECT_DIR$/src/Controller/Commerciale/CommercialController.php" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/src/Repository/Commercial/CommercialRepository.php" />
         <option value="$PROJECT_DIR$/config/packages/twig.yaml" />
         <option value="$PROJECT_DIR$/src/Entity/Model.php" />
         <option value="$PROJECT_DIR$/config/packages/stof_doctrine_extensions.yaml" />
         <option value="$PROJECT_DIR$/config/packages/vich_uploader.yaml" />
-        <option value="$PROJECT_DIR$/src/Form/CommercialType.php" />
-        <option value="$PROJECT_DIR$/public/js/mon.js" />
         <option value="$PROJECT_DIR$/config/services.yaml" />
-        <option value="$PROJECT_DIR$/src/Entity/Commercial/Commercial.php" />
-        <option value="$PROJECT_DIR$/templates/erp/direction_commerciale/commerciaux/ajouter-commerciaux.html.twig" />
         <option value="$PROJECT_DIR$/templates/components/control-sidebar.html.twig" />
         <option value="$PROJECT_DIR$/templates/erp/layout.html.twig" />
-        <option value="$PROJECT_DIR$/templates/base.html.twig" />
+        <option value="$PROJECT_DIR$/templates/erp/direction_commerciale/commerciaux/infomation-commerciaux.html.twig" />
+        <option value="$PROJECT_DIR$/public/js/mon.js" />
         <option value="$PROJECT_DIR$/src/Controller/ErpController.php" />
         <option value="$PROJECT_DIR$/templates/erp/dashborad.html.twig" />
-        <option value="$PROJECT_DIR$/templates/erp/direction_commerciale/commerciaux/infomation-commerciaux.html.twig" />
-        <option value="$PROJECT_DIR$/src/Controller/Commercial/CommercialController.php" />
         <option value="$PROJECT_DIR$/templates/erp/direction_commerciale/commerciaux/liste-commerciaux.html.twig" />
+        <option value="$PROJECT_DIR$/templates/erp/direction_commerciale/commerciaux/ajouter-commerciaux.html.twig" />
+        <option value="$PROJECT_DIR$/templates/components/flash_messages.html.twig" />
+        <option value="$PROJECT_DIR$/templates/erp/direction_commerciale/commerciaux/infomation-update-commerciaux.html.twig" />
+        <option value="$PROJECT_DIR$/templates/erp/direction_commerciale/commerciaux/enregistrer.html.twig" />
+        <option value="$PROJECT_DIR$/src/Form/CommercialType.php" />
+        <option value="$PROJECT_DIR$/src/Repository/Commercial/ProspectingSheetRepository.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Commercial/Commercial.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Commercial/ProspectingSheet.php" />
+        <option value="$PROJECT_DIR$/src/Form/Commercial/ProspectingSheetType.php" />
+        <option value="$PROJECT_DIR$/templates/erp/direction_commerciale/prospecting_sheet/create_update.html.twig" />
+        <option value="$PROJECT_DIR$/templates/base.html.twig" />
+        <option value="$PROJECT_DIR$/config/packages/knp_snappy.yaml" />
+        <option value="$PROJECT_DIR$/templates/erp/direction_commerciale/prospecting_sheet/prospecting_sheet_pdf.html.twig" />
+        <option value="$PROJECT_DIR$/templates/erp/direction_commerciale/prospecting_sheet/prospecting_sheet_read.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/Commercial/PropectingSheetController.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Commercial/TypeProspection.php" />
+        <option value="$PROJECT_DIR$/src/Form/Commercial/CommercialType.php" />
+        <option value="$PROJECT_DIR$/src/Controller/Commercial/CommercialController.php" />
+        <option value="$PROJECT_DIR$/templates/erp/direction_commerciale/prospecting_sheet/read.html.twig" />
+        <option value="$PROJECT_DIR$/templates/erp/direction_commerciale/commerciaux/lister.html.twig" />
+        <option value="$PROJECT_DIR$/templates/components/main-header.html.twig" />
+        <option value="$PROJECT_DIR$/src/Entity/Commercial/ProspectingType.php" />
+        <option value="$PROJECT_DIR$/templates/erp/direction_commerciale/commerciaux/prospecting_type/read.html.twig" />
+        <option value="$PROJECT_DIR$/src/Form/Commercial/ProspectingTypeType.php" />
+        <option value="$PROJECT_DIR$/templates/erp/direction_commerciale/prospecting_type/read.html.twig" />
+        <option value="$PROJECT_DIR$/templates/erp/direction_commerciale/prospecting_type/create_update.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/Commercial/ProspectingTypeController.php" />
+        <option value="$PROJECT_DIR$/src/Form/Commercial/TypeProspectionType.php" />
+        <option value="$PROJECT_DIR$/src/Controller/Commercial/TypeProspectionController.php" />
+        <option value="$PROJECT_DIR$/templates/erp/direction_commerciale/type_prospection/create_update.html.twig" />
+        <option value="$PROJECT_DIR$/templates/erp/direction_commerciale/type_prospection/read.html.twig" />
+        <option value="$PROJECT_DIR$/src/Entity/Commercial/TypeContract.php" />
+        <option value="$PROJECT_DIR$/templates/components/sidebar-wrapper.html.twig" />
+        <option value="$PROJECT_DIR$/src/Form/Commercial/TypeContractType.php" />
+        <option value="$PROJECT_DIR$/templates/erp/direction_commerciale/type_contract/create_update.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/Commercial/TypeContractController.php" />
+        <option value="$PROJECT_DIR$/templates/erp/direction_commerciale/type_contract/read.html.twig" />
       </list>
     </option>
   </component>
@@ -241,6 +323,8 @@
       <path value="$PROJECT_DIR$/vendor/mikehaertl/php-tmpfile" />
       <path value="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions" />
       <path value="$PROJECT_DIR$/vendor/jms/metadata" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -257,28 +341,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="erp_unitedinsurance" type="b2602c69:ProjectViewProjectNode" />
               <item name="erp_unitedinsurance" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="erp_unitedinsurance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="erp_unitedinsurance" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="erp_unitedinsurance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="erp_unitedinsurance" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="packages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="erp_unitedinsurance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="erp_unitedinsurance" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="erp_unitedinsurance" type="b2602c69:ProjectViewProjectNode" />
@@ -308,7 +377,21 @@
               <item name="erp_unitedinsurance" type="b2602c69:ProjectViewProjectNode" />
               <item name="erp_unitedinsurance" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Entity" type="462c0819:PsiDirectoryNode" />
+              <item name="Commercial" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="erp_unitedinsurance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="erp_unitedinsurance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Form" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="erp_unitedinsurance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="erp_unitedinsurance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Form" type="462c0819:PsiDirectoryNode" />
+              <item name="Commercial" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="erp_unitedinsurance" type="b2602c69:ProjectViewProjectNode" />
@@ -359,13 +442,20 @@
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="erp" type="462c0819:PsiDirectoryNode" />
               <item name="direction_commerciale" type="462c0819:PsiDirectoryNode" />
-              <item name="commerciaux" type="462c0819:PsiDirectoryNode" />
+              <item name="type_contract" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="erp_unitedinsurance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="erp_unitedinsurance" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="erp" type="462c0819:PsiDirectoryNode" />
+              <item name="direction_commerciale" type="462c0819:PsiDirectoryNode" />
+              <item name="type_prospection" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -377,7 +467,16 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Form/Commercial" />
+      <recent name="$PROJECT_DIR$/templates/erp/direction_commerciale" />
+      <recent name="$PROJECT_DIR$/src/Repository/Commercial" />
       <recent name="$PROJECT_DIR$/src/Entity/Commercial" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/erp/direction_commerciale/type_contract" />
+      <recent name="$PROJECT_DIR$/templates/erp/direction_commerciale/prospecting_type" />
+      <recent name="$PROJECT_DIR$/templates/erp/direction_commerciale/commerciaux/prospecting_type" />
+      <recent name="$PROJECT_DIR$/templates/erp/direction_commerciale/prospecting_sheet" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -406,22 +505,29 @@
       <workItem from="1546015167346" duration="14075000" />
       <workItem from="1546082778495" duration="1396000" />
       <workItem from="1546089341107" duration="22280000" />
-      <workItem from="1546119365485" duration="10877000" />
+      <workItem from="1546119365485" duration="12233000" />
+      <workItem from="1546193280804" duration="24357000" />
+      <workItem from="1546260322707" duration="10320000" />
+      <workItem from="1546274796811" duration="6549000" />
+      <workItem from="1546287004456" duration="8373000" />
+      <workItem from="1546308408109" duration="4170000" />
+      <workItem from="1546355567771" duration="13094000" />
+      <workItem from="1546434890973" duration="13949000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49930000" />
+    <option name="totallyTimeSpent" value="132098000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26613545" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31553784" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3296355" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -435,10 +541,10 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32988048" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2613546" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23904383" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -456,273 +562,385 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32988048" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/adminlte/bower_components/datatables.net/js/jquery.dataTables.min.js">
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/validator/Constraints/Date.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state relative-caret-position="152">
+          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/adminlte/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js">
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/framework-bundle/Controller/ControllerTrait.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state relative-caret-position="304">
+          <caret line="156" column="23" selection-start-line="156" selection-start-column="23" selection-end-line="156" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/components/content-wrapper.html.twig" />
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="61" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/Column.php">
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/doctrine-bridge/Validator/Constraints/UniqueEntity.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
-          <caret line="73" column="7" lean-forward="true" selection-start-line="73" selection-start-column="7" selection-end-line="73" selection-end-column="7" />
+          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/validator/Constraints/Email.php">
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/validator/Constraints/Expression.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
-          <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
+          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/twig.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Mapping/Annotation/Timestampable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Timestampable/Traits/Timestampable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-906">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Model.php" />
-    <entry file="file://$PROJECT_DIR$/config/packages/stof_doctrine_extensions.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/gedmo/doctrine-extensions/lib/Gedmo/Timestampable/Traits/TimestampableEntity.php">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/common.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
-          <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+          <caret line="127" column="18" selection-start-line="127" selection-start-column="18" selection-end-line="127" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/erp/dashborad.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="874">
+          <caret line="38" column="55" selection-start-line="38" selection-start-column="55" selection-end-line="38" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/doctrine/doctrine-bundle/Repository/ServiceEntityRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/EntityRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3217">
+          <caret line="40" column="6" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/direction_commerciale/commercials/5c2a2fc1c50e9026449203.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Repository/Commercial/CommercialRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="14" column="47" selection-start-line="14" selection-end-line="15" />
           <folding>
-            <element signature="e#46#78#0#PHP" expanded="true" />
+            <element signature="e#45#82#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/vich_uploader.yaml">
+    <entry file="file://$PROJECT_DIR$/src/Controller/ErpController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="437">
+          <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/CommercialType.php">
+    <entry file="file://$PROJECT_DIR$/templates/components/flash_messages.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+        <state relative-caret-position="92">
+          <caret line="4" column="51" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/mon.js">
+    <entry file="file://$PROJECT_DIR$/templates/erp/direction_commerciale/commerciaux/infomation-update-commerciaux.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="64" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
+        <state relative-caret-position="248">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/translation.yaml">
+    <entry file="file://$PROJECT_DIR$/src/Repository/CommercialRepository.php" />
+    <entry file="file://$PROJECT_DIR$/templates/commercial/propecting_sheet/index.html.twig" />
+    <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+        <state relative-caret-position="490">
+          <caret line="46" column="17" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/bundles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/services.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="83">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/components/control-sidebar.html.twig">
+    <entry file="file://$PROJECT_DIR$/config/packages/knp_snappy.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="190" column="38" selection-start-line="190" selection-start-column="38" selection-end-line="190" selection-end-column="38" />
+        <state>
+          <caret selection-end-line="8" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/erp/direction_commerciale/prospecting_sheet/create_update.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2438">
+          <caret line="106" column="31" selection-start-line="106" selection-start-column="31" selection-end-line="106" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/knplabs/knp-snappy/src/Knp/Snappy/Pdf.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2415">
+          <caret line="105" column="36" selection-start-line="105" selection-start-column="36" selection-end-line="105" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/erp/direction_commerciale/prospecting_sheet/prospecting_sheet_pdf.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="16" column="99" selection-start-line="16" selection-start-column="99" selection-end-line="16" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Repository/Commercial/ProspectingSheetRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Commercial/PropectingSheetController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="96" column="53" lean-forward="true" selection-start-line="96" selection-start-column="53" selection-end-line="96" selection-end-column="53" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#li#0;n#ul#1;n#div#0;n#div#0;n#aside#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#li#1;n#ul#1;n#div#0;n#div#0;n#aside#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#li#2;n#ul#1;n#div#0;n#div#0;n#aside#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#li#3;n#ul#1;n#div#0;n#div#0;n#aside#0;n#!!top" expanded="true" />
+            <element signature="e#45#88#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/components/main-footer.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Entity/Commercial/ProspectingSheet.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="58" selection-start-line="4" selection-start-column="58" selection-end-line="4" selection-end-column="58" />
+        <state relative-caret-position="276">
+          <caret line="40" column="94" selection-start-line="40" selection-start-column="94" selection-end-line="40" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/erp/direction_commerciale/prospecting_sheet/prospecting_sheet_read.html.twig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/erp/direction_commerciale/commerciaux/lister.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="93" column="151" selection-start-line="93" selection-start-column="151" selection-end-line="93" selection-end-column="151" />
+          <folding>
+            <element signature="e#2835#2856#0#HTML" expanded="true" />
+            <element signature="e#7327#7350#0#Twig" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/components/main-header.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1504">
-          <caret line="84" column="58" selection-start-line="84" selection-start-column="58" selection-end-line="84" selection-end-column="58" />
+        <state relative-caret-position="285">
+          <caret line="124" column="24" selection-start-line="124" selection-start-column="24" selection-end-line="124" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/components/sidebar-wrapper.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Entity/Commercial/TypeProspection.php" />
+    <entry file="file://$PROJECT_DIR$/src/Migrations/Version20181231141647.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Migrations/Version20181231173809.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Migrations/Version20190101182706.php" />
+    <entry file="file://$PROJECT_DIR$/src/Form/Commercial/CommercialType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="42" column="95" selection-start-line="42" selection-start-column="66" selection-end-line="42" selection-end-column="95" />
+        <state relative-caret-position="391">
+          <caret line="23" column="14" lean-forward="true" selection-start-line="2" selection-start-column="29" selection-end-line="23" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/erp/layout.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Migrations/Version20190101183404.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/erp/direction_commerciale/prospecting_sheet/read.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="24" column="10" lean-forward="true" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+        <state relative-caret-position="42">
+          <caret line="46" column="51" selection-start-line="46" selection-start-column="51" selection-end-line="46" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/Commercial/ProspectingSheetType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
           <folding>
-            <element signature="e#814#850#0#Twig" expanded="true" />
+            <element signature="e#39#76#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/EntityRepository.php">
+    <entry file="file://$PROJECT_DIR$/src/Entity/Commercial/TypeProspection.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="207" column="20" selection-start-line="207" selection-start-column="20" selection-end-line="207" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Repository/Commercial/CommercialRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="33" lean-forward="true" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/erp/dashborad.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="282" column="96" selection-start-line="282" selection-start-column="96" selection-end-line="282" selection-end-column="96" />
+        <state relative-caret-position="188">
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
           <folding>
-            <element signature="e#12#32#0#Twig" expanded="true" />
-            <element signature="e#4481#4517#0#HTML" expanded="true" />
-            <element signature="e#5332#5350#0#HTML" expanded="true" />
-            <element signature="e#5882#5900#0#HTML" expanded="true" />
-            <element signature="e#6435#6453#0#HTML" expanded="true" />
-            <element signature="e#6985#7003#0#HTML" expanded="true" />
-            <element signature="e#11293#11329#0#HTML" expanded="true" />
-            <element signature="e#17827#17844#0#Twig" expanded="true" />
-            <element signature="e#209896#209974#0#HTML" expanded="true" />
-            <element signature="e#210530#210608#0#HTML" expanded="true" />
-            <element signature="e#211162#211240#0#HTML" expanded="true" />
-            <element signature="e#211796#211874#0#HTML" expanded="true" />
-            <element signature="e#212430#212508#0#HTML" expanded="true" />
-            <element signature="e#213062#213140#0#HTML" expanded="true" />
-            <element signature="e#213695#213773#0#HTML" expanded="true" />
-            <element signature="e#215084#215102#0#HTML" expanded="true" />
-            <element signature="e#215840#215858#0#HTML" expanded="true" />
-            <element signature="e#216605#216623#0#HTML" expanded="true" />
-            <element signature="e#217369#217387#0#HTML" expanded="true" />
+            <element signature="e#41#73#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/erp/direction_commerciale/commerciaux/enregistrer.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="119" column="27" lean-forward="true" selection-start-line="115" selection-start-column="15" selection-end-line="119" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Commercial/CommercialController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="128" column="23" lean-forward="true" selection-start-line="128" selection-start-column="23" selection-end-line="129" selection-end-column="5" />
+          <folding>
+            <element signature="e#125#162#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/erp/direction_commerciale/type_prospection/read.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="43" column="51" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
+          <folding>
+            <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
+            <element signature="e#2901#2924#0#Twig" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#td#3;n#tr#0;n#table#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
+            <element signature="e#4933#4956#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Commercial/Commercial.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
+        <state relative-caret-position="359">
+          <caret line="107" column="18" lean-forward="true" selection-start-line="103" selection-start-column="3" selection-end-line="107" selection-end-column="18" />
           <folding>
             <element signature="e#41#54#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Entity/Commercial/TypeContract.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="96" column="16" lean-forward="true" selection-start-line="96" selection-start-column="16" selection-end-line="96" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/ErpController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="25" column="20" lean-forward="true" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/erp/direction_commerciale/commerciaux/ajouter-commerciaux.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="103" column="1" lean-forward="true" selection-start-line="103" selection-start-column="1" selection-end-line="105" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/erp/direction_commerciale/commerciaux/infomation-update-commerciaux.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="399" column="15" selection-start-line="399" selection-start-column="15" selection-end-line="399" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/Commercial/CommercialController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="74" column="67" lean-forward="true" selection-start-line="74" selection-start-column="67" selection-end-line="74" selection-end-column="67" />
+        <state relative-caret-position="207">
+          <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
           <folding>
-            <element signature="e#125#162#0#PHP" expanded="true" />
-            <element signature="e#1933#2000#0#PHP" expanded="true" />
-            <element signature="e#2665#2690#0#PHP" expanded="true" />
-            <element signature="e#2778#2857#0#PHP" expanded="true" />
+            <element signature="e#41#73#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/erp/direction_commerciale/commerciaux/liste-commerciaux.html.twig">
+    <entry file="file://$PROJECT_DIR$/templates/components/sidebar-wrapper.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="51" column="138" selection-start-line="51" selection-start-column="138" selection-end-line="51" selection-end-column="138" />
+        <state relative-caret-position="471">
+          <caret line="53" column="68" selection-start-line="53" selection-start-column="68" selection-end-line="53" selection-end-column="68" />
           <folding>
-            <element signature="e#2982#3005#0#Twig" expanded="true" />
-            <element signature="e#3471#3494#0#Twig" expanded="true" />
-            <element signature="e#3618#3641#0#Twig" expanded="true" />
-            <element signature="e#3764#3787#0#Twig" expanded="true" />
+            <element signature="e#2752#2770#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Commercial/TypeProspectionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="97" column="98" lean-forward="true" selection-start-line="97" selection-start-column="7" selection-end-line="97" selection-end-column="98" />
+          <folding>
+            <element signature="e#45#87#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/Commercial/TypeProspectionType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="17" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/erp/direction_commerciale/type_prospection/create_update.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1075">
+          <caret line="93" column="34" lean-forward="true" selection-start-line="93" selection-start-column="34" selection-end-line="93" selection-end-column="34" />
+          <folding>
+            <element signature="e#792#813#0#Twig" expanded="true" />
+            <element signature="e#1072#1095#0#Twig" expanded="true" />
+            <element signature="e#4512#4535#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/Commercial/TypeContractType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/erp/direction_commerciale/type_contract/create_update.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="906">
+          <caret line="84" column="90" selection-start-line="84" selection-start-column="90" selection-end-line="84" selection-end-column="90" />
+          <folding>
+            <element signature="e#784#802#0#Twig" expanded="true" />
+            <element signature="e#1061#1084#0#Twig" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#label#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#4495#4515#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Commercial/TypeContractController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-154">
+          <caret line="56" column="33" selection-start-line="56" selection-start-column="33" selection-end-line="56" selection-end-column="33" />
+          <folding>
+            <element signature="e#45#84#0#PHP" expanded="true" />
+            <element signature="e#2686#2708#0#PHP" expanded="true" />
+            <element signature="e#2836#2901#0#PHP" expanded="true" />
+            <element signature="e#2834#2890#0#PHP" expanded="true" />
+            <element signature="e#3787#3807#1#PHP" expanded="true" />
+            <element signature="e#4191#4211#1#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/erp/direction_commerciale/type_contract/read.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="74" column="135" selection-start-line="74" selection-start-column="135" selection-end-line="74" selection-end-column="135" />
+          <folding>
+            <element signature="e#611#630#0#Twig" expanded="true" />
+            <element signature="e#4867#4887#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>

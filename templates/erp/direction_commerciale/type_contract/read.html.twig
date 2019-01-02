@@ -1,0 +1,95 @@
+{% extends 'erp/layout.html.twig' %}
+
+  {% block contentHeader %}
+    <section class="content-header">
+    <h1>
+        Direction Commerciale
+        <small>Liste des Types de Contracts</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fas fa-briefcase"></i> Types de Contrats</a></li>
+        <li class="active">Lister</li>
+    </ol>
+    </section>
+ {% endblock %}
+
+{% block content %}
+<section class="content">
+    <div class="box">
+        <div class="box-header">
+            <h3 class="box-title">
+                <div class="btn-group">
+                    <a href="{{ path('type_contact_create') }}"><button type="button" class="btn btn-block btn-success"><i class="fas fa-users"></i> Créer</button></a>
+                </div>
+                <div class="btn-group">
+                    <form action="#" method="post" data-confirmation="true">
+                        <button type="submit" class="btn btn-info">Imprimer</button>
+                    </form>
+                </div>
+            </h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+            <div class="row">
+                <div class="col-sm-8">
+                    {{ include('components/flash_messages.html.twig') }}
+                </div>
+            </div>
+           <table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
+                            <thead>
+                            <tr role="row">
+                                <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="N°: activate to sort column descending" style="width: 10px;">N°</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Code: activate to sort column ascending" style="width: 10px;">Code</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Nom: activate to sort column ascending" style="width: 10px;">Nom</th>
+                                <th style="width: 2px;">Action</th>
+                            </tr>
+                            </thead>
+                            {% for typeContract in typeContracts %}
+                                <tr>
+                                    <td>{{ loop.index }}</td>
+                                    <td>{{ typeContract.code }}</td>
+                                    <td>{{ typeContract.name }}</td>
+                                    <td>
+                                        <div class="row">
+                                            <div class="col-sm-2">
+                                                <form action="#">
+                                                    <button class="btn btn-warning">Modifier</button>
+                                                </form>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <button type="submit" class="btn btn-danger" data-toggle="modal" data-target="#modal-danger"> <i class="fa fa-"></i> Supprimer</button>
+                                                <div class="btn-group">
+                                                    <div class="modal modal-danger fade" id="modal-danger" style="display: none;">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                        <span aria-hidden="true">×</span></button>
+                                                                    <h4 class="modal-title">  <i class="fa fa-exclamation-triangle"> NB: La suppression est irréversible.</i></h4>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <p>Voulez-vous vraiment supprimer {{ typeContract.name }} ?</p>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Annuler</button>
+                                                                    <form action="{{ url('type_contract_delete', {'id': typeContract.id}) }}" method="post" data-confirmation="true" id="delete-form">
+                                                                        <input type="hidden" name="token" value="{{ csrf_token('delete') }}" />
+                                                                        <button type="submit" class="btn btn-outline">Confirmer</button>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                            <!-- /.modal-content -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </table></div>
+        </div>
+        <!-- /.box-body -->
+    </div>
+    </section>
+{% endblock %}

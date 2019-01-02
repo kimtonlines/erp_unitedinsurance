@@ -18,7 +18,7 @@
         <div class="box-header">
             <h3 class="box-title">
                 <div class="btn-group">
-                    <a href="{{ path('ajouter-commerciaux') }}"><button type="button" class="btn btn-block btn-default"><i class="fas fa-users"></i> Ajouter Commerciaux</button></a>
+                    <a href="{{ path('ajouter-commerciaux') }}"><button type="button" class="btn btn-block btn-success"><i class="fas fa-users"></i> Ajouter</button></a>
                 </div>
                 <div class="btn-group">
                     <button type="button" class="btn btn-block btn-info">Imprimer</button>
@@ -27,6 +27,11 @@
         </div>
         <!-- /.box-header -->
         <div class="box-body">
+            <div class="row">
+                <div class="col-sm-8">
+                    {{ include('components/flash_messages.html.twig') }}
+                </div>
+            </div>
            <table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
                             <thead>
                             <tr role="row">
@@ -37,6 +42,7 @@
                                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Prenom: activate to sort column ascending" style="width: 104px;">Prénom</th>
                                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Sexe: activate to sort column ascending" style="width: 104px;">Sexe</th>
                                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Téléphone: activate to sort column ascending" style="width: 104px;">Téléphone</th>
+                                <th style="width: 5px;">Action</th>
                             </tr>
                             </thead>
                             {% for commercial in commercials %}
@@ -45,16 +51,56 @@
                                     {% if commercial.image %}
                                     <td><a href="{{ path('information-commerciaux', {'slug': commercial.slug}) }}"><img src="{{ vich_uploader_asset(commercial, 'imageFile') }}" alt="..." width="50" class="img-thumbnail"></a></td>
                                     {% else %}
-                                        <td><img src="{{ asset('images/no-image-icon.png') }}" width="50" height="50" class="img-fluid" alt="Responsive image"></td>
+                                        <td><a href="{{ path('information-commerciaux', {'slug': commercial.slug}) }}"><img src="{{ asset('images/no-image-icon.png') }}" width="50" height="50" class="img-fluid" alt="Responsive image"></a></td>
                                     {% endif %}
-                                    <td><a href="{{ path('information-commerciaux', {'slug': commercial.slug}) }}">{{ commercial.code }}</a></td>
-                                    <td><a href="{{ path('information-commerciaux', {'slug': commercial.slug}) }}">{{ commercial.nom }}</a></td>
-                                    <td><a href="{{ path('information-commerciaux', {'slug': commercial.slug}) }}">{{ commercial.prenom }}</a></td>
+                                    <td>{{ commercial.code }}</td>
+                                    <td>{{ commercial.nom }}</td>
+                                    <td>{{ commercial.prenom }}</td>
                                     <td>{{ commercial.sexe }}</td>
                                     <td>{{ commercial.telephone }}</td>
+                                    <td>
+                                        {#<div class="btn-group">#}
+                                            {#<div class="modal modal-danger fade" id="modal-danger" style="display: none;">#}
+                                                {#<div class="modal-dialog">#}
+                                                    {#<div class="modal-content">#}
+                                                        {#<div class="modal-header">#}
+                                                            {#<button type="button" class="close" data-dismiss="modal" aria-label="Close">#}
+                                                                {#<span aria-hidden="true">×</span></button>#}
+                                                            {#<h4 class="modal-title">  <i class="fa fa-exclamation-triangle"> NB: La suppression est irréversible.</i></h4>#}
+                                                        {#</div>#}
+                                                        {#<div class="modal-body">#}
+                                                            {#<p>Voulez-vous vraiment supprimer {{ commercial.nom }} ?</p>#}
+                                                        {#</div>#}
+                                                        {#<div class="modal-footer">#}
+                                                            {#<button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Annuler</button>#}
+                                                            {#<form action="{{ url('supprimer_commerciaux', {'id': commercial.id}) }}" method="post" data-confirmation="true" id="delete-form">#}
+                                                                {#<input type="hidden" name="token" value="{{ csrf_token('delete') }}" />#}
+                                                                {#<button type="submit" class="btn btn-outline">Confirmer</button>#}
+                                                            {#</form>#}
+
+                                                        {#</div>#}
+                                                    {#</div>#}
+                                                    {#<!-- /.modal-content -->#}
+                                                {#</div>#}
+                                                {#<!-- /.modal-dialog -->#}
+                                            {#<button type="button" class="btn btn-primary">Action</button>#}
+                                            {#<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">#}
+                                                {#<span class="caret"></span>#}
+                                                {#<span class="sr-only">Toggle Dropdown</span>#}
+                                            {#</button>#}
+                                            {#<ul class="dropdown-menu" role="menu">#}
+                                                {#<li><a href="{{ path('information-commerciaux', {'slug': commercial.slug}) }}">Voir</a></li>#}
+                                                {#<li>#}
+                                                        <a href="{{ path('information-commerciaux', {'slug': commercial.slug}) }}" class="btn btn-info">Voir</a>
+                                                    {#<a href="#" data-toggle="modal" data-target="#modal-danger">Supprimer</a>#}
+                                                {#</li>#}
+                                            {#</ul>#}
+                                            {#</div>#}
+                                    </td>
                                 </tr>
                             {% endfor %}
-                        </table></div>
+                        </table>
+        </div>
         </div>
         <!-- /.box-body -->
     </div>

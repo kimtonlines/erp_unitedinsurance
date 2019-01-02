@@ -1,0 +1,20 @@
+<table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
+    <thead>
+    <tr role="row">
+        <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="N°: activate to sort column descending" style="width: 10px;">N°</th>
+        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Code Fiche Prospection: activate to sort column ascending" style="width: 120px;">Code Fiche Prospection</th>
+        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Date Prospection: activate to sort column ascending" style="width: 20px;">Date Prospection</th>
+        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Code Commercial: activate to sort column ascending" style="width: 104px;">Code Commercial</th>
+        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Nom Commercial: activate to sort column ascending" style="width: 104px;">Nom Commercial</th>
+    </tr>
+    </thead>
+    {% for prospectingSheet in prospectingSheets %}
+        <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ prospectingSheet.code }}</td>
+            <td>{{ prospectingSheet.date | date('d/m/Y') }}</td>
+            <td>{{ prospectingSheet.commercial.code }}</td>
+            <td>{{ prospectingSheet.commercial.prenom }} {{ prospectingSheet.commercial.nom }}</td>
+        </tr>
+    {% endfor %}
+</table>

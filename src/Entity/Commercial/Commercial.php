@@ -3,7 +3,10 @@
 namespace App\Entity\Commercial;
 
 use DateTime;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Validator\Constraints as Assert;
 use Gedmo\Timestampable\Traits\TimestampableEntity;
 use Symfony\Component\HttpFoundation\File\File;
@@ -13,6 +16,9 @@ use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\Commercial\CommercialRepository")
+ * @UniqueEntity("code")
+ * @UniqueEntity("telephone")
+ * @UniqueEntity("email")
  * @Vich\Uploadable
  */
 class Commercial
@@ -31,7 +37,7 @@ class Commercial
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255, unique=true)
+     * @ORM\Column(type="string", length=255, unique=true);
      */
     private $code;
 
@@ -51,6 +57,7 @@ class Commercial
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank
      * @Assert\NotNull
+     * @Assert\Length(min="2", minMessage="Cette valeur n'est pas un nom valide.")
      */
     private $nom;
 
@@ -58,16 +65,19 @@ class Commercial
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank
      * @Assert\NotNull
+     * @Assert\Length(min="2", minMessage="Cette valeur n'est pas un prénom valide.")
      */
     private $prenom;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Choice({"Masculin", "Féminin"})
      */
     private $sexe;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Regex(pattern="/^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$/i", message="Cette valeur n'est pas une date de naissance valide.")
      */
     private $dateNaissance;
 
@@ -75,8 +85,15 @@ class Commercial
      * @ORM\Column(type="string", length=255, unique=true)
      * @Assert\NotBlank
      * @Assert\NotNull
+     * @Assert\Length(min="11", max="11")
+     * @Assert\Regex(pattern="/^([0-9]+[\s]*)+$/i", message="Cette valeur n'est pas un numéro de téléphone valide.")
      */
     private $telephone;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $domicile;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true, unique=true)
@@ -86,9 +103,19 @@ class Commercial
 
     /**
      * @ORM\Column(unique=true)
-     * @Gedmo\Slug(fields={"prenom", "code"})
+     * @Gedmo\Slug(fields={"code"})
      */
     private $slug;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Commercial\ProspectingSheet", mappedBy="commercial")
+     */
+    private $prospectingSheets;
+
+    public function __construct()
+    {
+        $this->prospectingSheets = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -203,6 +230,23 @@ class Commercial
         return $this;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getDomicile()
+    {
+        return $this->domicile;
+    }
+
+    /**
+     * @param mixed $domicile
+     */
+    public function setDomicile($domicile): void
+    {
+        $this->domicile = $domicile;
+    }
+
+
     public function getEmail(): ?string
     {
         return $this->email;
@@ -221,6 +265,37 @@ class Commercial
     public function getSlug()
     {
         return $this->slug;
+    }
+
+    /**
+     * @return Collection|ProspectingSheet[]
+     */
+    public function getProspectingSheets(): Collection
+    {
+        return $this->prospectingSheets;
+    }
+
+    public function addProspectingSheet(ProspectingSheet $prospectingSheet): self
+    {
+        if (!$this->prospectingSheets->contains($prospectingSheet)) {
+            $this->prospectingSheets[] = $prospectingSheet;
+            $prospectingSheet->setCommercial($this);
+        }
+
+        return $this;
+    }
+
+    public function removeProspectingSheet(ProspectingSheet $prospectingSheet): self
+    {
+        if ($this->prospectingSheets->contains($prospectingSheet)) {
+            $this->prospectingSheets->removeElement($prospectingSheet);
+            // set the owning side to null (unless already changed)
+            if ($prospectingSheet->getCommercial() === $this) {
+                $prospectingSheet->setCommercial(null);
+            }
+        }
+
+        return $this;
     }
 
 }

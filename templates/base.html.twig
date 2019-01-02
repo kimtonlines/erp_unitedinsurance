@@ -96,11 +96,14 @@
         <!-- page script -->
         <script>
             $(function () {
+                //Initialize Select2 Elements
+                $('.select2').select2();
                 //Datemask dd/mm/yyyy
                 $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
                 //Money Euro
                 $('[data-mask]').inputmask()
                 $('#example1').DataTable({
+                    "pageLength": 10,
                     language: {
                         processing:     "Traitement en cours...",
                         search:         "Rechercher&nbsp;:",

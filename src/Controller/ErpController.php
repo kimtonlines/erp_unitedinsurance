@@ -24,7 +24,7 @@ class ErpController extends AbstractController
     {
         $commerciaux = $commercialRepository->findAll();
        return $this->render('erp/dashborad.html.twig', [
-           'commerciaux' => $commerciaux
+           'commerciaux' => $commerciaux,
        ]);
     }
 

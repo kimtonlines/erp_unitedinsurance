@@ -1,0 +1,107 @@
+{% extends 'erp/layout.html.twig' %}
+
+  {% block contentHeader %}
+    <section class="content-header">
+    <h1>
+        Direction Commerciale
+        <small>Liste des Fiches de Prospections</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fas fa-briefcase"></i> Fiches de Prospection</a></li>
+        <li class="active">Lister</li>
+    </ol>
+    </section>
+ {% endblock %}
+
+{% block content %}
+<section class="content">
+    <div class="box">
+        <div class="box-header">
+            <h3 class="box-title">
+                <div class="btn-group">
+                    <a href="{{ path('prospecting_sheet_create') }}"><button type="button" class="btn btn-block btn-success"><i class="fas fa-users"></i> Créer</button></a>
+                </div>
+                <div class="btn-group">
+                    <form action="{{ url('prospecting_sheet_pdf') }}" method="post" data-confirmation="true">
+                        <button type="submit" class="btn btn-info">Imprimer</button>
+                    </form>
+                </div>
+            </h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+            <div class="row">
+                <div class="col-sm-8">
+                    {{ include('components/flash_messages.html.twig') }}
+                </div>
+            </div>
+           <table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
+                            <thead>
+                            <tr role="row">
+                                <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="N°: activate to sort column descending" style="width: 10px;">N°</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Code Fiche Prospection: activate to sort column ascending" style="width: 10px;">Code</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Date Prospection: activate to sort column ascending" style="width: 10px;">Date</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Code Commercial: activate to sort column ascending" style="width: 104px;">Code Commercial</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Nom Commercial: activate to sort column ascending" style="width: 104px;">Nom Commercial</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Date Edition: activate to sort column ascending" style="width: 104px;">Date Edition</th>
+                                <th style="width: 5px;">Action</th>
+                            </tr>
+                            </thead>
+                            {% for prospectingSheet in prospectingSheets %}
+                                <tr>
+                                    <td>{{ loop.index }}</td>
+                                    <td>{{ prospectingSheet.code }}</td>
+                                    <td>{{ prospectingSheet.date | date('d/m/Y') }}</td>
+                                    <td>{{ prospectingSheet.commercial.code }}</td>
+                                    <td>{{ prospectingSheet.commercial.prenom }} {{ prospectingSheet.commercial.nom }}</td>
+                                    <td>{{ prospectingSheet.createdAt |  date('d/m/Y') }} à {{ prospectingSheet.createdAt |  date('H:i:s') }}</td>
+                                    <td>
+                                        {#<div class="btn-group">#}
+                                            {#<div class="modal modal-danger fade" id="modal-danger" style="display: none;">#}
+                                                {#<div class="modal-dialog">#}
+                                                    {#<div class="modal-content">#}
+                                                        {#<div class="modal-header">#}
+                                                            {#<button type="button" class="close" data-dismiss="modal" aria-label="Close">#}
+                                                                {#<span aria-hidden="true">×</span></button>#}
+                                                            {#<h4 class="modal-title">  <i class="fa fa-exclamation-triangle"> NB: La suppression est irréversible.</i></h4>#}
+                                                        {#</div>#}
+                                                        {#<div class="modal-body">#}
+                                                            {#<p>Voulez-vous vraiment supprimer {{ commercial.nom }} ?</p>#}
+                                                        {#</div>#}
+                                                        {#<div class="modal-footer">#}
+                                                            {#<button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Annuler</button>#}
+                                                            {#<form action="{{ url('supprimer_commerciaux', {'id': commercial.id}) }}" method="post" data-confirmation="true" id="delete-form">#}
+                                                                {#<input type="hidden" name="token" value="{{ csrf_token('delete') }}" />#}
+                                                                {#<button type="submit" class="btn btn-outline">Confirmer</button>#}
+                                                            {#</form>#}
+
+                                                        {#</div>#}
+                                                    {#</div>#}
+                                                    {#<!-- /.modal-content -->#}
+                                                {#</div>#}
+                                                {#<!-- /.modal-dialog -->#}
+                                            {#<button type="button" class="btn btn-primary">Action</button>#}
+                                            {#<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">#}
+                                                {#<span class="caret"></span>#}
+                                                {#<span class="sr-only">Toggle Dropdown</span>#}
+                                            {#</button>#}
+                                            {#<ul class="dropdown-menu" role="menu">#}
+                                                {#<li><a href="{{ path('information-commerciaux', {'slug': commercial.slug}) }}">Voir</a></li>#}
+                                                {#<li>#}
+                                                    {#<form action="{{ path('information-commerciaux', {'slug': commercial.slug}) }}" method="post" data-confirmation="true">#}
+                                                        {#<button type="submit" class="btn btn-info" style="width: 90px; margin-bottom: 5px;">Voir</button>#}
+                                                    {#</form>#}
+                                                    {#<a href="#" data-toggle="modal" data-target="#modal-danger">Supprimer</a>#}
+                                                {#</li>#}
+                                            {#</ul>#}
+                                            {#</div>#}
+                                                    <a href="#" class="btn btn-info">Voir</a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </table></div>
+        </div>
+        <!-- /.box-body -->
+    </div>
+    </section>
+{% endblock %}

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Form;
+namespace App\Form\Commercial;
 
 use App\Entity\Commercial\Commercial;
 use Symfony\Component\Form\AbstractType;
@@ -37,6 +37,10 @@ class CommercialType extends AbstractType
                 'label' => false
             ])
             ->add('telephone', TextType::class, [
+                'label' => false
+            ])
+            ->add('domicile', TextType::class, [
+                'required' => false,
                 'label' => false
             ])
             ->add('email', TextType::class, [

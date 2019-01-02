@@ -50,40 +50,10 @@
                                     <td>{{ typeProspection.code }}</td>
                                     <td>{{ typeProspection.nom }}</td>
                                     <td>
-                                        <div class="row">
-                                            <div class="col-sm-2">
                                                 <form action="{{ url('prospecting_type_update', {'slug': typeProspection.slug}) }}">
                                                     <button class="btn btn-warning">Modifier</button>
                                                 </form>
-                                            </div>
-                                            <div class="col-sm-2">
-                                                <button type="submit" class="btn btn-danger" data-toggle="modal" data-target="#modal-danger"> <i class="fa fa-"></i> Supprimer</button>
-                                                <div class="btn-group">
-                                                    <div class="modal modal-danger fade" id="modal-danger" style="display: none;">
-                                                        <div class="modal-dialog">
-                                                            <div class="modal-content">
-                                                                <div class="modal-header">
-                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                        <span aria-hidden="true">×</span></button>
-                                                                    <h4 class="modal-title">  <i class="fa fa-exclamation-triangle"> NB: La suppression est irréversible.</i></h4>
-                                                                </div>
-                                                                <div class="modal-body">
-                                                                    <p>Voulez-vous vraiment supprimer {{ typeProspection.nom }} ?</p>
-                                                                </div>
-                                                                <div class="modal-footer">
-                                                                    <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Annuler</button>
-                                                                    <form action="{{ url('prospecting_type_delete', {'id': typeProspection.id}) }}" method="post" data-confirmation="true" id="delete-form">
-                                                                        <input type="hidden" name="token" value="{{ csrf_token('delete') }}" />
-                                                                        <button type="submit" class="btn btn-outline">Confirmer</button>
-                                                                    </form>
-                                                                </div>
-                                                            </div>
-                                                            <!-- /.modal-content -->
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            </div>
+
                                     </td>
                                 </tr>
                             {% endfor %}

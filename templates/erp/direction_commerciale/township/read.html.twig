@@ -4,10 +4,10 @@
     <section class="content-header">
     <h1>
         Direction Commerciale
-        <small>Liste des Types de Contracts</small>
+        <small>Liste des Communes</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="#"><i class="fas fa-briefcase"></i> Types de Contrats</a></li>
+        <li><a href="#"><i class="fas fa-briefcase"></i> Communes</a></li>
         <li class="active">Lister</li>
     </ol>
     </section>
@@ -19,7 +19,7 @@
         <div class="box-header">
             <h3 class="box-title">
                 <div class="btn-group">
-                    <a href="{{ path('type_contact_create') }}"><button type="button" class="btn btn-block btn-success"><i class="fas fa-users"></i> Créer</button></a>
+                    <a href="{{ path('township_create') }}"><button type="button" class="btn btn-block btn-success"><i class="fas fa-users"></i> Créer</button></a>
                 </div>
                 <div class="btn-group">
                     <form action="#" method="post" data-confirmation="true">
@@ -44,13 +44,13 @@
                                 <th style="width: 2px;">Action</th>
                             </tr>
                             </thead>
-                            {% for typeContract in typeContracts %}
+                            {% for township in townships %}
                                 <tr>
                                     <td>{{ loop.index }}</td>
-                                    <td>{{ typeContract.code }}</td>
-                                    <td>{{ typeContract.name }}</td>
+                                    <td>{{ township.code }}</td>
+                                    <td>{{ township.name }}</td>
                                     <td>
-                                        <form action="{{ url('type_contract_update', {'slug': typeContract.slug}) }}">
+                                        <form action="{{ url('township_update', {'slug': township.slug}) }}">
                                             <button class="btn btn-warning">Modifier</button>
                                         </form>
                                     </td>

@@ -46,14 +46,14 @@ class TypeProspectionController extends AbstractController
                 if ($typeProspectionId) {
                     $nombre = $typeProspectionId->getId() + 1;
                     if ($typeProspectionId->getId()  < 9 ) {
-                        $code = "Type-00".$nombre;
+                        $code = "TP-00".$nombre;
                     } elseif ($typeProspectionId->getId()  < 99) {
-                        $code = "Type-00".$nombre;
+                        $code = "TP-0".$nombre;
                     } else {
-                        $code = "Type-".$nombre;
+                        $code = "TP-".$nombre;
                     }
                 } else {
-                    $code = "Type-001";
+                    $code = "TP-001";
                 }
                 $tpProspection->setCode($code);
             }

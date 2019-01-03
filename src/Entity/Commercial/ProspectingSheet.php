@@ -2,6 +2,8 @@
 
 namespace App\Entity\Commercial;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -54,6 +56,16 @@ class ProspectingSheet
      */
     private $commercial;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Commercial\Prospect", mappedBy="prospectingSheet")
+     */
+    private $prospects;
+
+    public function __construct()
+    {
+        $this->prospects = new ArrayCollection();
+    }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -99,6 +111,37 @@ class ProspectingSheet
     public function setCommercial(?Commercial $commercial): self
     {
         $this->commercial = $commercial;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Prospect[]
+     */
+    public function getProspects(): Collection
+    {
+        return $this->prospects;
+    }
+
+    public function addProspect(Prospect $prospect): self
+    {
+        if (!$this->prospects->contains($prospect)) {
+            $this->prospects[] = $prospect;
+            $prospect->setProspectingSheet($this);
+        }
+
+        return $this;
+    }
+
+    public function removeProspect(Prospect $prospect): self
+    {
+        if ($this->prospects->contains($prospect)) {
+            $this->prospects->removeElement($prospect);
+            // set the owning side to null (unless already changed)
+            if ($prospect->getProspectingSheet() === $this) {
+                $prospect->setProspectingSheet(null);
+            }
+        }
 
         return $this;
     }

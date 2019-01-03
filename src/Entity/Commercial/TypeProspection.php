@@ -2,6 +2,8 @@
 
 namespace App\Entity\Commercial;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Gedmo\Mapping\Annotation as Gedmo;
@@ -47,6 +49,16 @@ class TypeProspection
      */
     private $slug;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Commercial\Prospect", mappedBy="prospectingType")
+     */
+    private $prospects;
+
+    public function __construct()
+    {
+        $this->prospects = new ArrayCollection();
+    }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -82,6 +94,37 @@ class TypeProspection
     public function getSlug()
     {
         return $this->slug;
+    }
+
+    /**
+     * @return Collection|Prospect[]
+     */
+    public function getProspects(): Collection
+    {
+        return $this->prospects;
+    }
+
+    public function addProspect(Prospect $prospect): self
+    {
+        if (!$this->prospects->contains($prospect)) {
+            $this->prospects[] = $prospect;
+            $prospect->setProspectingType($this);
+        }
+
+        return $this;
+    }
+
+    public function removeProspect(Prospect $prospect): self
+    {
+        if ($this->prospects->contains($prospect)) {
+            $this->prospects->removeElement($prospect);
+            // set the owning side to null (unless already changed)
+            if ($prospect->getProspectingType() === $this) {
+                $prospect->setProspectingType(null);
+            }
+        }
+
+        return $this;
     }
 
 

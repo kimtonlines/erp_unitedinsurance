@@ -22,15 +22,15 @@
             <div class="box-header with-border">
                 <h3 class="box-title">
                     <div class="btn-group">
-                        <a href="{{ path('ward_read') }}"><button type="button" class="btn btn-block btn-default"><i class="fas fa-users"></i> Lister</button></a>
+                        <a href="{{ path('ward_read') }}" class="btn btn-block btn-default"><i class="fas fa-users"></i> Lister</a>
                     </div>
                     {% if edit %}
                     <div class="btn-group">
-                        <a href="{{ path('ward_create') }}"><button type="button" class="btn btn-block btn-success"><i class="fas fa-users"></i> Ajouter</button></a>
+                        <a href="{{ path('ward_create') }}" class="btn btn-block btn-success"><i class="fas fa-users"></i> Créer</a>
                     </div>
                     {% endif %}
                     <div class="btn-group">
-                        <button type="button" class="btn btn-block btn-info">Imprimer</button>
+                        <a href="{{ path('area_read') }}" class="btn btn-block btn-default"><i class="fas fa-map-marker-alt"></i> Lister Zone</a>
                     </div>
                 </h3>
             </div>

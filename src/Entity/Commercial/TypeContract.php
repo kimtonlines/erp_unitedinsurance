@@ -2,6 +2,8 @@
 
 namespace App\Entity\Commercial;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -47,6 +49,16 @@ class TypeContract
      */
     private $slug;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Commercial\Prospect", mappedBy="typeContract")
+     */
+    private $prospects;
+
+    public function __construct()
+    {
+        $this->prospects = new ArrayCollection();
+    }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -82,6 +94,37 @@ class TypeContract
     public function getSlug()
     {
         return $this->slug;
+    }
+
+    /**
+     * @return Collection|Prospect[]
+     */
+    public function getProspects(): Collection
+    {
+        return $this->prospects;
+    }
+
+    public function addProspect(Prospect $prospect): self
+    {
+        if (!$this->prospects->contains($prospect)) {
+            $this->prospects[] = $prospect;
+            $prospect->setTypeContract($this);
+        }
+
+        return $this;
+    }
+
+    public function removeProspect(Prospect $prospect): self
+    {
+        if ($this->prospects->contains($prospect)) {
+            $this->prospects->removeElement($prospect);
+            // set the owning side to null (unless already changed)
+            if ($prospect->getTypeContract() === $this) {
+                $prospect->setTypeContract(null);
+            }
+        }
+
+        return $this;
     }
 
 

@@ -1,0 +1,116 @@
+{% extends 'erp/layout.html.twig' %}
+
+  {% block contentHeader %}
+    <section class="content-header">
+    <h1>
+        Direction Commerciale
+        <small>Liste des Prospects</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fas fa-briefcase"></i> Prospects</a></li>
+        <li class="active">Lister</li>
+    </ol>
+    </section>
+ {% endblock %}
+
+{% block content %}
+    <div class="box">
+        <div class="box-header">
+            <h3 class="box-title">
+                <div class="btn-group">
+                    <a href="{{ path('prospect_create') }}"><button type="button" class="btn btn-block btn-success"><i class="fas fa-users"></i> Créer</button></a>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-block btn-info">Imprimer</button>
+                </div>
+            </h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+            <div class="row">
+                <div class="col-sm-8">
+                    {{ include('components/flash_messages.html.twig') }}
+                </div>
+            </div>
+           <table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
+                            <thead>
+                            <tr role="row">
+                                <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="N°: activate to sort column descending" style="width: 169px;">N°</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Image: activate to sort column ascending" style="width: 208px;">Image</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Code: activate to sort column ascending" style="width: 208px;">Code</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Type de Prospection: activate to sort column ascending" style="width: 185px;">Type de Prospection</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Nom ou Raison Sociale: activate to sort column ascending" style="width: 104px;">Nom ou Raison Sociale</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Type de Contrat: activate to sort column ascending" style="width: 104px;">Type de Contrat</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Zone: activate to sort column ascending" style="width: 104px;">Zone</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Téléphone: activate to sort column ascending" style="width: 104px;">Téléphone</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Localisation: activate to sort column ascending" style="width: 104px;">Localisation</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Observation: activate to sort column ascending" style="width: 104px;">Observation</th>
+                                <th style="width: 5px;">Action</th>
+                            </tr>
+                            </thead>
+                            {% for prospect in prospects %}
+                                <tr>
+                                    <td>{{ loop.index }}</td>
+                                    {% if prospect.image %}
+                                    <td><a href="#"><img src="{{ vich_uploader_asset(prospect, 'imageFile') }}" alt="..." width="50" class="img-thumbnail"></a></td>
+                                    {% else %}
+                                        <td><a href="#"><img src="{{ asset('images/no-image-icon.png') }}" width="50" height="50" class="img-fluid" alt="Responsive image"></a></td>
+                                    {% endif %}
+                                    <td>{{ prospect.code }}</td>
+                                    <td>{{ prospect.prospectingType.nom }}</td>
+                                    <td>{{ prospect.name }}</td>
+                                    <td>{{ prospect.typeContract.name }}</td>
+                                    <td>{{ prospect.ward.township.code }}{{ prospect.ward.code }}</td>
+                                    <td>{{ prospect.phone }}</td>
+                                    <td>{{ prospect.localization }}</td>
+                                    <td>{{ prospect.observation }}</td>
+                                    <td>
+                                        {#<div class="btn-group">#}
+                                            {#<div class="modal modal-danger fade" id="modal-danger" style="display: none;">#}
+                                                {#<div class="modal-dialog">#}
+                                                    {#<div class="modal-content">#}
+                                                        {#<div class="modal-header">#}
+                                                            {#<button type="button" class="close" data-dismiss="modal" aria-label="Close">#}
+                                                                {#<span aria-hidden="true">×</span></button>#}
+                                                            {#<h4 class="modal-title">  <i class="fa fa-exclamation-triangle"> NB: La suppression est irréversible.</i></h4>#}
+                                                        {#</div>#}
+                                                        {#<div class="modal-body">#}
+                                                            {#<p>Voulez-vous vraiment supprimer {{ prospects.nom }} ?</p>#}
+                                                        {#</div>#}
+                                                        {#<div class="modal-footer">#}
+                                                            {#<button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Annuler</button>#}
+                                                            {#<form action="{{ url('supprimer_commerciaux', {'id': prospects.id}) }}" method="post" data-confirmation="true" id="delete-form">#}
+                                                                {#<input type="hidden" name="token" value="{{ csrf_token('delete') }}" />#}
+                                                                {#<button type="submit" class="btn btn-outline">Confirmer</button>#}
+                                                            {#</form>#}
+
+                                                        {#</div>#}
+                                                    {#</div>#}
+                                                    {#<!-- /.modal-content -->#}
+                                                {#</div>#}
+                                                {#<!-- /.modal-dialog -->#}
+                                            {#<button type="button" class="btn btn-primary">Action</button>#}
+                                            {#<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">#}
+                                                {#<span class="caret"></span>#}
+                                                {#<span class="sr-only">Toggle Dropdown</span>#}
+                                            {#</button>#}
+                                            {#<ul class="dropdown-menu" role="menu">#}
+                                                {#<li><a href="{{ path('information-commerciaux', {'slug': prospects.slug}) }}">Voir</a></li>#}
+                                                {#<li>#}
+                                                        {#<a href="{{ path('prospect_profile', {'slug': prospect.slug}) }}" class="btn btn-info">Voir</a>#}
+                                        <form action="{{ url('prospect_update', {'slug': prospect.slug}) }}">
+                                            <button class="btn btn-warning">Modifier</button>
+                                        </form>
+                                                    {#<a href="#" data-toggle="modal" data-target="#modal-danger">Supprimer</a>#}
+                                                {#</li>#}
+                                            {#</ul>#}
+                                            {#</div>#}
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+        </div>
+        </div>
+        <!-- /.box-body -->
+    </div>
+{% endblock %}

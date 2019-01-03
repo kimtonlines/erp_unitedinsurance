@@ -1,0 +1,172 @@
+{% extends 'erp/layout.html.twig' %}
+
+    {% form_theme form 'bootstrap_3_layout.html.twig' %}
+
+  {% block contentHeader %}
+      <section class="content-header">
+          <h1>
+              Direction Commerciale
+              <small>Créer des Prospects</small>
+          </h1>
+          <ol class="breadcrumb">
+              <li><a href="#"><i class="fas fa-briefcase"></i> Prospects</a></li>
+              <li class="active">Créer</li>
+          </ol>
+      </section>
+  {% endblock %}
+
+{% block content %}
+    <div>
+        <!-- general form elements -->
+        <div class="box box-primary">
+            <div class="box-header with-border">
+                <h3 class="box-title">
+                    <div class="btn-group">
+                        <a href="{{ path('prospect_read') }}"><button type="button" class="btn btn-block btn-default"><i class="fas fa-users"></i> Lister</button></a>
+                    </div>
+                    {% if edit %}
+                    <div class="btn-group">
+                        <a href="{{ path('prospect_create') }}"><button type="button" class="btn btn-block btn-success"><i class="fas fa-users"></i> Créer</button></a>
+                    </div>
+                    {% endif %}
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-block btn-info">Imprimer</button>
+                    </div>
+                </h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            {{ form_start(form) }}
+            <div class="box-body">
+                <div class="row">
+                    <div class="col-sm-8">
+                        {{ include('components/flash_messages.html.twig') }}
+                    </div>
+                </div>
+                <i class="fa fa-exclamation-triangle" style="color: #dd4b39;"> NB: Champs obligatoire.</i>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label for="exampleInputFile">Image</label>
+                            {% if prospect.image %}
+                                <img id="uploadPreview" src="{{ vich_uploader_asset(prospect, 'imageFile') }}" width="50" height="50" class="img-fluid" alt="Responsive image">
+                            {% else %}
+                                <img id="uploadPreview" src="{{ asset('images/no-image-icon.png') }}" width="50" height="50" class="img-fluid" alt="Responsive image">
+                            {% endif %}
+                    {{ form_row(form.imageFile, {attr: {'onchange': 'previewImageProspect()'} }) }}
+                        </div>
+                    </div>
+                    {% if prospect.id %}
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label><i class="fa fa-barcode"></i> Code</label>
+                            <input type="text" value="{{ prospect.code }}" readonly class="form-control">
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label><i class="fas fa-id-card-alt"></i> Fiche de Prospection <i class="fa fa-exclamation-triangle" style="color: #dd4b39;"></i></label>
+                            {{ form_row(form.prospectingSheet, {attr: {'class': 'form-control select2'} }) }}
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label><i class="fas fa-address-card"></i> Type de Prospection <i class="fa fa-exclamation-triangle" style="color: #dd4b39;"></i></label>
+                            {{ form_row(form.prospectingType, {attr: {'class': 'form-control select2'} }) }}
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label><i class="fas fa-file-signature"></i> Type de Contrat <i class="fa fa-exclamation-triangle" style="color: #dd4b39;"></i></label>
+                            {{ form_row(form.typeContract, {attr: {'class': 'form-control select2'} }) }}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1"><i class="fas fa-info"></i> Nom ou Raison Sociale <i class="fa fa-exclamation-triangle" style="color: #dd4b39;"></i></label>
+                            {{ form_row(form.name, {attr: {class: 'form-control'} }) }}
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label><i class="fas fa-map-marker-alt"></i> Zone <i class="fa fa-exclamation-triangle" style="color: #dd4b39;"></i></label>
+                            {{ form_row(form.ward, {attr: {'class': 'form-control select2'} }) }}
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label> <i class="fa fa-phone"></i> Téléphone <i class="fa fa-exclamation-triangle" style="color: #dd4b39;"></i></label>
+                                {{ form_row(form.phone, {attr: {'class': 'form-control', 'data-inputmask': "'mask': '99 99 99 99'", 'data-mask': ''} }) }}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label><i class="fa fa-at"></i> Email</label>
+                            {{ form_row(form.email, {attr: {class: 'form-control'} }) }}
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label><i class="fas fa-map-marker-alt"></i> Localisation <i class="fa fa-exclamation-triangle" style="color: #dd4b39;"></i></label>
+                                {{ form_row(form.localization, {attr: {class: 'form-control'} }) }}
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label><i class="fa fa-list"></i> Observation</label>
+                                {{ form_row(form.observation, {attr: {class: 'form-control'} }) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box-footer">
+                {% if edit %}
+                <button type="submit" class="btn btn-warning">Modifier</button>
+                {% else %}
+                <button type="submit" class="btn btn-success">Créer</button>
+                {% endif %}
+            </div>
+            {{ form_end(form) }}
+            {% if edit %}
+            <div style="margin-right: 30%; margin-left: 30%">
+                <button type="submit" class="btn btn-block btn-danger" data-toggle="modal" data-target="#modal-danger"> <i class="fa fa-"></i> Supprimer</button>
+                <div class="btn-group">
+                    <div class="modal modal-danger fade" id="modal-danger" style="display: none;">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">×</span></button>
+                                    <h4 class="modal-title">  <i class="fa fa-exclamation-triangle"> NB: La suppression est irréversible.</i></h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Voulez-vous vraiment supprimer {{ prospect.name }} ?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Annuler</button>
+                                    <form action="{{ url('prospect_delete', {'id': prospect.id}) }}" method="post" data-confirmation="true" id="delete-form">
+                                        <input type="hidden" name="token" value="{{ csrf_token('delete') }}" />
+                                        <button type="submit" class="btn btn-outline">Confirmer</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- /.modal-content -->
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
+ {% block javascripts %}
+     <script src="{{ asset('js/mon.js') }}"></script>
+ {% endblock %}

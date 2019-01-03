@@ -20,7 +20,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * Class Commercial
- * @package App\Controller\Direction_Commerciale
+ * @package App\Controller\Commerciale
  * @Route("direction-commerciale")
  */
 class CommercialController extends AbstractController

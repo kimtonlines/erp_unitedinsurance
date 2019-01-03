@@ -117,4 +117,17 @@ class WardController extends AbstractController
         return $this->redirectToRoute('ward_read');
 
     }
+
+    /**
+     * @param WardRepository $wardRepository
+     * @return Response
+     * @Route("/lister-zone", name="area_read")
+     */
+    public function areaRead(WardRepository $wardRepository)
+    {
+        $wards = $wardRepository->findAll();
+        return $this->render('erp/direction_commerciale/ward/area_read.html.twig', [
+            'wards' => $wards,
+        ]);
+    }
 }

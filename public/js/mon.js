@@ -8,6 +8,19 @@ if (window.FileReader) {
         // preview.style.display = "block";
     };
 
+    function previewImageUser() {
+
+        if (document.getElementById("user_imageFile").files.length === 0) {
+            return;
+        }
+        let file = document.getElementById("user_imageFile").files[0];
+        if (!rFilter.test(file.type)) {
+            alert("Veuillez choisir une image au format jpeg!");
+            return null;
+        }
+        reader.readAsDataURL(file);
+    }
+
     function previewImage() {
 
         if (document.getElementById("commercial_imageFile").files.length === 0) {

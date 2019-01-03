@@ -18,7 +18,7 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * Class PropectingSheetController
  * @package App\Controller\Commercial
- * @Route("direction-commerciale")
+ * @Route("admin/direction-commerciale")
  */
 class PropectingSheetController extends AbstractController
 {

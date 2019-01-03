@@ -154,7 +154,9 @@
                                 <a href="#" class="btn btn-default btn-flat">Profil</a>
                             </div>
                             <div class="pull-right">
-                                <a href="#" class="btn btn-default btn-flat">Se déconnecter</a>
+                                <form action="{{ url('logout') }}" method="post">
+                                    <button type="submit" class="btn btn-default btn-flat">Se déconnecter</button>
+                                </form>
                             </div>
                         </li>
                     </ul>

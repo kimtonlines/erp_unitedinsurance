@@ -12,12 +12,17 @@ use App\Repository\Commercial\CommercialRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
+/**
+ * Class ErpController
+ * @package App\Controller
+ * @Route("/admin")
+ */
 class ErpController extends AbstractController
 {
 
     /**
      * @return \Symfony\Component\HttpFoundation\Response
-     * @Route("dashboard", name="dashborad")
+     * @Route("/dashboard", name="dashborad")
      */
     public function erp (CommercialRepository $commercialRepository)
     {

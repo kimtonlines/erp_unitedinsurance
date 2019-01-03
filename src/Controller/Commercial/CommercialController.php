@@ -21,7 +21,7 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * Class Commercial
  * @package App\Controller\Commerciale
- * @Route("direction-commerciale")
+ * @Route("admin/direction-commerciale")
  */
 class CommercialController extends AbstractController
 {

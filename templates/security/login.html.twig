@@ -1,0 +1,91 @@
+{% extends 'base.html.twig' %}
+
+{#{% block title %}Connexion{% endblock %}#}
+
+{% block body %}
+    <div class="login-box">
+        <div class="login-logo">
+            <a href="#"><b>United</b>Insurance</a>
+        </div>
+        <!-- /.login-logo -->
+        <div class="login-box-body">
+            <p class="login-box-msg">Connexion</p>
+
+            <form {{ url('app_login') }} method="post">
+                {% if error %}
+                <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                {% endif %}
+                <div class="form-group has-feedback">
+                    <input type="email" name="_username" id="inputEmail" class="form-control" placeholder="Email" value="{{ last_username }}" required>
+                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <input type="password" name="_password" id="inputPassword" class="form-control" placeholder="Mot de passe" required>
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                </div>
+                <input type="hidden" name="_csrf_token"
+                value="{{ csrf_token('authenticate') }}"
+                >
+                <div class="row">
+                    {#<div class="col-xs-8">#}
+                        {#<div class="checkbox icheck">#}
+                            {#<label>#}
+                                {#<input type="checkbox"> Remember Me#}
+                            {#</label>#}
+                        {#</div>#}
+                    {#</div>#}
+                    <!-- /.col -->
+                    <div class="col-xs-5">
+                        <button type="submit" class="btn btn-primary btn-block btn-flat">Se connecter</button>
+                    </div>
+                    <!-- /.col -->
+                </div>
+            </form>
+
+            {#<div class="social-auth-links text-center">#}
+                {#<p>- OR -</p>#}
+                {#<a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using#}
+                    {#Facebook</a>#}
+                {#<a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign in using#}
+                    {#Google+</a>#}
+            {#</div>#}
+            <!-- /.social-auth-links -->
+
+            {#<a href="#">I forgot my password</a><br>#}
+            {#<a href="register.html" class="text-center">Register a new membership</a>#}
+
+        </div>
+        <!-- /.login-box-body -->
+    </div>
+    <!-- /.login-box -->
+{#<form method="post">#}
+    {#{% if error %}#}
+        {#<div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>#}
+    {#{% endif %}#}
+
+    {#<h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>#}
+    {#<label for="inputEmail" class="sr-only">Email</label>#}
+    {#<input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>#}
+    {#<label for="inputPassword" class="sr-only">Password</label>#}
+    {#<input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>#}
+
+    {#<input type="hidden" name="_csrf_token"#}
+           {#value="{{ csrf_token('authenticate') }}"#}
+    {#>#}
+
+    {#
+        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+        See https://symfony.com/doc/current/security/remember_me.html
+
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" name="_remember_me"> Remember me
+            </label>
+        </div>
+    #}
+
+    {#<button class="btn btn-lg btn-primary" type="submit">#}
+        {#Sign in#}
+    {#</button>#}
+{#</form>#}
+{% endblock %}

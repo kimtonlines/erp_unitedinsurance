@@ -14,7 +14,7 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * Class TypeContractController
  * @package App\Controller\Commercial
- * @Route("direction-commerciale/parametrage")
+ * @Route("admin/direction-commerciale/parametrage")
  */
 class TypeContractController extends AbstractController
 {

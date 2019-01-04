@@ -95,7 +95,7 @@
                                         {#<form action="{{ url('user_update', {'slug': user.slug}) }}">#}
                                             {#<button class="btn btn-warning">Modifier</button>#}
                                         {#</form>#}
-                                        <a href="{{ url('user_update', {'slug': user.slug}) }}" class="btn btn-warning">Modifier</a>
+                                        <a href="{{ path('user_profile', {'slug': user.slug}) }}" class="btn btn-warning">Modifier</a>
                                                     {#<a href="#" data-toggle="modal" data-target="#modal-danger">Supprimer</a>#}
                                                 {#</li>#}
                                             {#</ul>#}

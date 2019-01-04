@@ -127,7 +127,7 @@ class UserController extends AbstractController
      * @param Request $request
      * @param ObjectManager $objectManager
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
-     * @Route("/utilisateur/{slug}/modifier", name="user_update")
+     * @Route("/utilisateur/{slug}/profil", name="user_profile")
      */
     public function profile(User $user, Request $request, ObjectManager $objectManager)
     {

@@ -66,6 +66,7 @@ class PropectingSheetController extends AbstractController
 
             if (!$prospectingSheet->getId()) {
 
+                $prospectingSheet->setUser($this->getUser());
                 $objectManager->persist($prospectingSheet);
                 $objectManager->flush();
 

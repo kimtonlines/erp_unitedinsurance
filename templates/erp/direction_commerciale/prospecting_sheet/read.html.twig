@@ -41,9 +41,9 @@
                                 <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="N°: activate to sort column descending" style="width: 10px;">N°</th>
                                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Code Fiche Prospection: activate to sort column ascending" style="width: 10px;">Code</th>
                                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Date Prospection: activate to sort column ascending" style="width: 10px;">Date</th>
-                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Code Commercial: activate to sort column ascending" style="width: 104px;">Code Commercial</th>
-                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Nom Commercial: activate to sort column ascending" style="width: 104px;">Nom Commercial</th>
-                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Date Edition: activate to sort column ascending" style="width: 104px;">Date Edition</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Commercial: activate to sort column ascending" style="width: 104px;">Commercial</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Crée par: activate to sort column ascending" style="width: 104px;">Crée par</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Date création: activate to sort column ascending" style="width: 104px;">Date création</th>
                                 <th style="width: 5px;">Action</th>
                             </tr>
                             </thead>
@@ -52,8 +52,8 @@
                                     <td>{{ loop.index }}</td>
                                     <td>{{ prospectingSheet.code }}</td>
                                     <td>{{ prospectingSheet.date | date('d/m/Y') }}</td>
-                                    <td>{{ prospectingSheet.commercial.code }}</td>
-                                    <td>{{ prospectingSheet.commercial.prenom }} {{ prospectingSheet.commercial.nom }}</td>
+                                    <td data-toggle="tooltip" data-placement="top" title="{{ prospectingSheet.commercial.prenom }} {{ prospectingSheet.commercial.nom }}">{{ prospectingSheet.commercial.code }}</td>
+                                    <td>{{ prospectingSheet.user.name }}</td>
                                     <td>{{ prospectingSheet.createdAt |  date('d/m/Y') }} à {{ prospectingSheet.createdAt |  date('H:i:s') }}</td>
                                     <td>
                                         {#<div class="btn-group">#}

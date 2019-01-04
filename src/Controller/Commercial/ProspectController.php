@@ -59,6 +59,7 @@ class ProspectController extends AbstractController
 
             if (!$prospect->getId()) {
 
+                $prospect->setUser($this->getUser());
                 $objectManager->persist($prospect);
                 $objectManager->flush();
 

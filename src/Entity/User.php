@@ -2,7 +2,11 @@
 
 namespace App\Entity;
 
+use App\Entity\Commercial\Prospect;
+use App\Entity\Commercial\ProspectingSheet;
 use DateTime;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
@@ -101,6 +105,22 @@ class User implements UserInterface, \Serializable
      * @Gedmo\Slug(fields={"code"})
      */
     private $slug;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Commercial\ProspectingSheet", mappedBy="user")
+     */
+    private $prospectingSheets;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Commercial\Prospect", mappedBy="user")
+     */
+    private $prospects;
+
+    public function __construct()
+    {
+        $this->prospectingSheets = new ArrayCollection();
+        $this->prospects = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -341,6 +361,68 @@ class User implements UserInterface, \Serializable
     public function setSlug($slug): void
     {
         $this->slug = $slug;
+    }
+
+    /**
+     * @return Collection|ProspectingSheet[]
+     */
+    public function getProspectingSheets(): Collection
+    {
+        return $this->prospectingSheets;
+    }
+
+    public function addProspectingSheet(ProspectingSheet $prospectingSheet): self
+    {
+        if (!$this->prospectingSheets->contains($prospectingSheet)) {
+            $this->prospectingSheets[] = $prospectingSheet;
+            $prospectingSheet->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeProspectingSheet(ProspectingSheet $prospectingSheet): self
+    {
+        if ($this->prospectingSheets->contains($prospectingSheet)) {
+            $this->prospectingSheets->removeElement($prospectingSheet);
+            // set the owning side to null (unless already changed)
+            if ($prospectingSheet->getUser() === $this) {
+                $prospectingSheet->setUser(null);
+            }
+        }
+
+        return $this;
+    }
+
+    public function removeProspect(Prospect $prospect): self
+    {
+        if ($this->prospects->contains($prospect)) {
+            $this->prospects->removeElement($prospect);
+            // set the owning side to null (unless already changed)
+            if ($prospect->getUser() === $this) {
+                $prospect->setUser(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Prospect[]
+     */
+    public function getProspects(): Collection
+    {
+        return $this->prospects;
+    }
+
+    public function addProspect(Prospect $prospect): self
+    {
+        if (!$this->prospects->contains($prospect)) {
+            $this->prospects[] = $prospect;
+            $prospect->setUser($this);
+        }
+
+        return $this;
     }
 
 }

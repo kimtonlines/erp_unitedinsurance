@@ -2,6 +2,7 @@
 
 namespace App\Entity\Commercial;
 
+use App\Entity\User;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
@@ -60,6 +61,12 @@ class ProspectingSheet
      * @ORM\OneToMany(targetEntity="App\Entity\Commercial\Prospect", mappedBy="prospectingSheet")
      */
     private $prospects;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="prospectingSheets")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $user;
 
     public function __construct()
     {
@@ -142,6 +149,18 @@ class ProspectingSheet
                 $prospect->setProspectingSheet(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): self
+    {
+        $this->user = $user;
 
         return $this;
     }

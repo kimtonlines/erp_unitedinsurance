@@ -45,6 +45,7 @@
                                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Téléphone: activate to sort column ascending" style="width: 104px;">Téléphone</th>
                                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Localisation: activate to sort column ascending" style="width: 104px;">Localisation</th>
                                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Observation: activate to sort column ascending" style="width: 104px;">Observation</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Crée par: activate to sort column ascending" style="width: 104px;">Crée par</th>
                                 <th style="width: 5px;">Action</th>
                             </tr>
                             </thead>
@@ -64,6 +65,7 @@
                                     <td>{{ prospect.phone }}</td>
                                     <td>{{ prospect.localization }}</td>
                                     <td>{{ prospect.observation }}</td>
+                                    <td>{{ prospect.user.name }}</td>
                                     <td>
                                         {#<div class="btn-group">#}
                                             {#<div class="modal modal-danger fade" id="modal-danger" style="display: none;">#}

@@ -39,12 +39,12 @@
                             <thead>
                             <tr role="row">
                                 <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="N°: activate to sort column descending" style="width: 10px;">N°</th>
-                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Code Fiche Prospection: activate to sort column ascending" style="width: 10px;">Code</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Code Fiche Prospection: activate to sort column ascending" style="width: 10px;">Fiche</th>
                                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Date Prospection: activate to sort column ascending" style="width: 10px;">Date</th>
                                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Commercial: activate to sort column ascending" style="width: 104px;">Commercial</th>
                                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Crée par: activate to sort column ascending" style="width: 104px;">Crée par</th>
                                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Date création: activate to sort column ascending" style="width: 104px;">Date création</th>
-                                <th style="width: 5px;">Action</th>
+                                <th style="width: 5px; text-align: center"><i class="fab fa-autoprefixer"></i></th>
                             </tr>
                             </thead>
                             {% for prospectingSheet in prospectingSheets %}
@@ -52,7 +52,7 @@
                                     <td>{{ loop.index }}</td>
                                     <td>{{ prospectingSheet.code }}</td>
                                     <td>{{ prospectingSheet.date | date('d/m/Y') }}</td>
-                                    <td data-toggle="tooltip" data-placement="top" title="{{ prospectingSheet.commercial.prenom }} {{ prospectingSheet.commercial.nom }}">{{ prospectingSheet.commercial.code }}</td>
+                                    <td>{{ prospectingSheet.commercial.nom }}</td>
                                     <td>{{ prospectingSheet.user.name }}</td>
                                     <td>{{ prospectingSheet.createdAt |  date('d/m/Y') }} à {{ prospectingSheet.createdAt |  date('H:i:s') }}</td>
                                     <td>
@@ -95,7 +95,29 @@
                                                 {#</li>#}
                                             {#</ul>#}
                                             {#</div>#}
-                                                    <a href="#" class="btn btn-info">Voir</a>
+                                        {#<div class="row">#}
+                                            {#<div class="col-sm-3">#}
+                                                {#<a href="#" class="btn btn-info">Voir</a>#}
+                                            {#</div>#}
+                                            {#<div class="col-sm-4">#}
+                                                {#<form action="{{ url('prospecting_sheet_pdf', {'slug': prospectingSheet.slug}) }}" method="post" data-confirmation="true">#}
+                                                    {#<button type="submit" class="btn btn-info">Imprimer</button>#}
+                                                {#</form>#}
+                                            {#</div>#}
+                                        {#</div>#}
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-danger">Action</button>
+                                            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+                                                <span class="caret"></span>
+                                                <span class="sr-only">Toggle Dropdown</span>
+                                            </button>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li><a href="#">Voir</a></li>
+                                                <li><a href="{{ url('prospecting_sheet_one_pdf', {'slug': prospectingSheet.slug}) }}" method="post" data-confirmation="true">
+                                                   Imprimer
+                                                    </a></li>
+                                            </ul>
+                                        </div>
                                     </td>
                                 </tr>
                             {% endfor %}

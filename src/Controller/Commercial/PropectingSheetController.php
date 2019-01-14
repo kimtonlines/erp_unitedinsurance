@@ -112,11 +112,16 @@ class PropectingSheetController extends AbstractController
 
     /**
      * @Route("/direction-commercial/liste-fiche-prospection", name="prospecting_sheet_pdf")
+     * @param Request $request
+     * @param ProspectingSheetRepository $prospectingSheetRepository
+     * @param Pdf $pdf
+     * @return Response
      */
     public function imprimer(Request $request, ProspectingSheetRepository $prospectingSheetRepository, Pdf $pdf)
     {
         $prospectingSheets = $prospectingSheetRepository->findAll();
 
+        header('Content-Type: application/pdf');
         $html = $this->render('erp/direction_commerciale/prospecting_sheet/prospecting_sheet_pdf.html.twig', [
             'prospectingSheets' => $prospectingSheets
         ]);
@@ -128,6 +133,34 @@ class PropectingSheetController extends AbstractController
                 'Content-Type'          => 'application/pdf',
                 'Content-Disposition'   => 'inline; filename="'.$filename.'.pdf"'
 
+            )
+        );
+    }
+
+    /**
+     * @Route("/direction-commercial/imprimer/{slug}/fiche-prospection", name="prospecting_sheet_one_pdf")
+     * @param Request $request
+     * @param ProspectingSheetRepository $prospectingSheetRepository
+     * @param ProspectingSheet $prospectingSheet
+     * @param Pdf $pdf
+     * @return Response
+     */
+    public function printOne(Request $request, ProspectingSheetRepository $prospectingSheetRepository, ProspectingSheet $prospectingSheet,  Pdf $pdf)
+    {
+//        $prospectingSheets = $prospectingSheetRepository->findAll();
+        $date = new DateTime('now');
+        $html = $this->renderView('erp/direction_commerciale/prospecting_sheet/prospecting_sheet_one_pdf.html.twig', [
+            'prospectingSheet' => $prospectingSheet,
+            'date' => $date
+        ]);
+
+        $filename = 'FICHE-PROSPECTION-'.$prospectingSheet->getCode();
+
+        $pdf->setOption('orientation', 'Landscape');
+        return new Response(
+            $pdf->getOutputFromHtml($html),200,array(
+                'Content-Type' => 'application/pdf',
+                'Content-Disposition'   => 'inline; filename="'.$filename.'.pdf"',
             )
         );
     }

@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FICHE PROSPECTION {{ prospectingSheet.code }}</title>
+    <style>
+        *
+        {
+            padding: 0;
+            margin: 0;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        #wrapper
+        {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        header
+        {
+            padding: 20px;
+        }
+
+        header
+        {
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        span
+        {
+            display: inline-block;
+            position: absolute;
+            top: 35px;
+            right: 400px;
+        }
+
+        #info
+        {
+            padding: 0 20px;
+        }
+
+        #info ul li
+        {
+            list-style-type: none;
+            text-decoration: none;
+            margin-bottom: 5px;
+        }
+
+        #tableau
+        {
+            padding: 20px;
+        }
+
+        table
+        {
+            text-align: center;
+            border-collapse: collapse;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        table td, table th
+        {
+            border: 1px solid black;
+            padding: 10px;
+            width: 300px;
+        }
+
+        table td
+        {
+            padding: 25px;
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <header>
+        <h1>FICHE DE PROSPECTION : {{ prospectingSheet.code }}</h1>
+    </header>
+    <section id="info">
+        <ul>
+            <li>COMMERCIAL : {{ prospectingSheet.commercial.nom }}</li>
+            <li>CODE : {{ prospectingSheet.commercial.code }}</li>
+            <li>DATE : {{ prospectingSheet.date | date('d/m/Y') }}</li>
+        </ul>
+    </section>
+    <section id="tableau">
+        <table>
+            <thead>
+            <tr>
+                <th>N°</th>
+                <th>TYPE PROSPECTION</th>
+                <th>Nom</th>
+                <th>TYPE CONTRAT</th>
+                <th>ZONE</th>
+                <th>TELEPHONE</th>
+                <th>OBSERVATION</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+</div>
+</body>
+</html>

@@ -45,17 +45,21 @@ class WardController extends AbstractController
                 $wardId = $wardRepository->findOneBy(array(), array('id' => 'desc'));
 
                 if ($wardId) {
-                    $nombre = $wardId->getId() + 1;
-                    if ($wardId->getId()  < 9 ) {
-                        $code = "0".$nombre;
-                    } elseif ($wardId->getId()  < 99) {
-                        $code = $nombre;
+                    /** @var Ward $lastOfWardsInTownship */
+                    $lastOfWardsInTownship = $ward->getTownship()->getWards()->last();
+
+                    if ($lastOfWardsInTownship) {
+                        $code = $lastOfWardsInTownship->getCode() + 1;
+
+                        if ($code < 10) {
+                            $code = "0" . $code;
+                        }
                     } else {
-                        $code = $nombre;
+                        $code = "01";
                     }
-                } else {
-                    $code = "01";
+
                 }
+
                 $ward->setCode($code);
             }
 

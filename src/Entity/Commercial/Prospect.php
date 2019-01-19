@@ -92,31 +92,31 @@ class Prospect
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Commercial\ProspectingSheet", inversedBy="prospects")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(onDelete="SET NULL")
      */
     private $prospectingSheet;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Commercial\TypeProspection", inversedBy="prospects")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(onDelete="SET NULL")
      */
     private $prospectingType;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Commercial\TypeContract", inversedBy="prospects")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(onDelete="SET NULL")
      */
     private $typeContract;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Commercial\Ward", inversedBy="prospects")
-     * @ORM\JoinColumn(nullable=false)
+     * * @ORM\JoinColumn(onDelete="SET NULL")
      */
     private $ward;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="prospects")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(onDelete="SET NULL")
      */
     private $user;
 

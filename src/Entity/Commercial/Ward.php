@@ -12,7 +12,6 @@ use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\Commercial\WardRepository")
- * @UniqueEntity("code")
  * @UniqueEntity("name")
  */
 class Ward
@@ -51,7 +50,7 @@ class Ward
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Commercial\Township", inversedBy="wards")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(onDelete="SET NULL")
      */
     private $township;
 

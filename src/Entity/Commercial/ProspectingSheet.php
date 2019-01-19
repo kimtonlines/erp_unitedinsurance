@@ -53,7 +53,7 @@ class ProspectingSheet
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Commercial\Commercial", inversedBy="prospectingSheets")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(onDelete="SET NULL")
      */
     private $commercial;
 
@@ -64,7 +64,7 @@ class ProspectingSheet
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="prospectingSheets")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(onDelete="SET NULL")
      */
     private $user;
 

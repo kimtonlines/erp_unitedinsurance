@@ -50,10 +50,10 @@
                                 <tr>
                                     <td>{{ loop.index }}</td>
                                     <td>{{ prospect.code }}</td>
-                                    <td>{{ prospect.prospectingType.nom }}</td>
+                                    <td>  {% if prospect.prospectingType %} {{ prospect.prospectingType.nom }} {% endif %}</td>
                                     <td>{{ prospect.name }}</td>
-                                    <td>{{ prospect.typeContract.name }}</td>
-                                    <td>{{ prospect.ward.township.code }}{{ prospect.ward.code }}</td>
+                                    <td> {% if prospect.typeContract %} {{ prospect.typeContract.name }} {% endif %}</td>
+                                    <td>{% if prospect.ward.township %} {{ prospect.ward.township.code }}{{ prospect.ward.code }} {% endif %}</td>
                                     <td>{{ prospect.phone }}</td>
                                     <td>{{ prospect.user.name }}</td>
                                     <td>

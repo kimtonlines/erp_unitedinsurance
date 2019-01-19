@@ -48,8 +48,8 @@
                             {% for ward in wards %}
                                 <tr>
                                     <td>{{ loop.index }}</td>
-                                    <td>{{ ward.township.code }}{{ ward.code }}</td>
-                                    <td>{{ ward.township.code }} - {{ ward.township.name }}</td>
+                                    <td>{% if ward.township %}{{ ward.township.code }} {{ ward.code }}  {% endif %}</td>
+                                    <td>{% if ward.township %} {{ ward.township.code }} - {{ ward.township.name }} {% endif %}</td>
                                     <td>{{ ward.code }} - {{ ward.name }}</td>
                                     <td>
                                         <form action="{{ url('ward_update', {'slug': ward.slug}) }}">

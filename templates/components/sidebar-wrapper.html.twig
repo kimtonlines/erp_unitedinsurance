@@ -36,39 +36,71 @@
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">MENU</li>
             <!-- Optionally, you can add icons to the links -->
-            <li class="active"><a href="{{ path('dashborad') }}"><i class="fas fa-chart-line"></i> <span>Tableau de bord</span></a></li>
+            <li class="active"><a href="{{ path('dashborad') }}"><i class="fas fa-chart-line"></i>
+                    <span>TABLEAU DE BOARD</span></a></li>
             <li class="treeview">
-                <a href="#"><i class="fas fa-briefcase"></i> <span>Direction Commerciale</span>
+                <a href="#"><i class="fas fa-briefcase"></i> <span>AGENCES</span>
                     <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ path('liste-commerciaux') }}"><i class="fas fa-users"></i> <span>Commerciaux</span></a></li>
-                    <li><a href="{{ path('prospecting_sheet_read') }}"><i class="fas fa-id-card-alt"></i> <span>Fiches de prospections</span></a></li>
-                    <li><a href="{{ path('prospect_read') }}"><i class="fas fa-address-book"></i> <span>Prospects</span></a></li>
-                    <li><a href="{{ path('area_read') }}"><i class="fas fa-map-marked-alt"></i> <span>Zones</span></a></li>
                     <li class="treeview">
-                        <a href="#"><i class="fas fa-sliders-h"></i> <span>Paramètres</span>
-                            <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+                        <a href="#"><i class="fas fa-briefcase"></i> <span>Cocody</span>
+                            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="{{ path('prospecting_type_read') }}"><i class="fas fa-address-card"></i> <span>Types Prospections</span></a></li>
-                            <li><a href="{{ path('type_contract_read') }}"><i class="fas fa-file-signature"></i> <span>Types Contrats</span></a></li>
                             <li class="treeview">
-                                <a href="#"><i class="fas fa-map-marker-alt"></i> <span>Zones</span>
-                                    <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+                                <a href="#"><i class="fas fa-briefcase"></i> <span>Direction Commerciale</span>
+                                    <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                     </span>
                                 </a>
                                 <ul class="treeview-menu">
-                                    <li><a href="{{ path('township_read') }}"><i class="fas fa-city"></i> <span>Communes</span></a></li>
-                                    <li><a href="{{ path('ward_read') }}"><i class="fas fa-warehouse"></i> <span>Quartiers</span></a></li>
+                                    <li><a href="{{ path('liste-commerciaux') }}"><i class="fas fa-users"></i> <span>Commerciaux</span></a>
+                                    </li>
+                                    <li><a href="{{ path('prospecting_sheet_read') }}"><i
+                                                    class="fas fa-id-card-alt"></i> <span>Fiches de prospections</span></a>
+                                    </li>
+                                    <li><a href="{{ path('prospect_read') }}"><i class="fas fa-address-book"></i> <span>Prospects</span></a>
+                                    </li>
+                                    <li><a href="{{ path('area_read') }}"><i class="fas fa-map-marked-alt"></i> <span>Zones</span></a>
+                                    </li>
                                 </ul>
+                            </li>
+                </ul>
+            </li>
+        </ul>
+            <li class="treeview">
+                <a href="#"><i class="fas fa-sliders-h"></i> <span>REGLAGES</span>
+                    <span class="pull-right-container"><i
+                                class="fa fa-angle-left pull-right"></i></span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{{ path('prospecting_type_read') }}"><i
+                                    class="fas fa-address-card"></i>
+                            <span>Types Prospections</span></a></li>
+                    <li><a href="{{ path('type_contract_read') }}"><i
+                                    class="fas fa-file-signature"></i>
+                            <span>Types Contrats</span></a></li>
+                    <li class="treeview">
+                        <a href="#"><i class="fas fa-map-marker-alt"></i> <span>Zones</span>
+                            <span class="pull-right-container"><i
+                                        class="fa fa-angle-left pull-right"></i></span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="{{ path('township_read') }}"><i
+                                            class="fas fa-city"></i> <span>Communes</span></a>
+                            </li>
+                            <li><a href="{{ path('ward_read') }}"><i
+                                            class="fas fa-warehouse"></i> <span>Quartiers</span></a>
                             </li>
                         </ul>
                     </li>
                 </ul>
             </li>
-        </ul>
         <!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->

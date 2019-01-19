@@ -3,6 +3,9 @@
 namespace App\Form\Commercial;
 
 use App\Entity\Commercial\Commercial;
+use App\Entity\Commercial\Status;
+use Doctrine\ORM\EntityRepository;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
@@ -46,6 +49,23 @@ class CommercialType extends AbstractType
             ->add('email', TextType::class, [
                 'required' => false,
                 'label' => false
+            ])
+            ->add('salaried', ChoiceType::class, [
+                'choices' => [
+                    'Non' => false,
+                    'Oui' => true,
+                ],
+                'label' => false
+            ])
+            ->add('status', EntityType::class, [
+                'class' => Status::class,
+                'choice_label' => 'name',
+                'label' => false,
+                'query_builder' => function (EntityRepository $er) {
+                    return $er->createQueryBuilder('s')
+                        ->orderBy('s.name', 'ASC');
+                }
+
             ])
         ;
     }

@@ -112,6 +112,16 @@ class Commercial
      */
     private $prospectingSheets;
 
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $salaried;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Commercial\Status", inversedBy="commercials")
+     */
+    private $status;
+
     public function __construct()
     {
         $this->prospectingSheets = new ArrayCollection();
@@ -294,6 +304,30 @@ class Commercial
                 $prospectingSheet->setCommercial(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getSalaried(): ?bool
+    {
+        return $this->salaried;
+    }
+
+    public function setSalaried(bool $salaried): self
+    {
+        $this->salaried = $salaried;
+
+        return $this;
+    }
+
+    public function getStatus(): ?Status
+    {
+        return $this->status;
+    }
+
+    public function setStatus(?Status $status): self
+    {
+        $this->status = $status;
 
         return $this;
     }

@@ -2,6 +2,8 @@
 
 namespace App\Entity\Commercial;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Gedmo\Timestampable\Traits\TimestampableEntity;
@@ -47,6 +49,16 @@ class Status
      * @Gedmo\Slug(fields={"name", "code"})
      */
     private $slug;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Commercial\Commercial", mappedBy="status")
+     */
+    private $commercials;
+
+    public function __construct()
+    {
+        $this->commercials = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -97,6 +109,37 @@ class Status
     public function setSlug(string $slug): self
     {
         $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Commercial[]
+     */
+    public function getCommercials(): Collection
+    {
+        return $this->commercials;
+    }
+
+    public function addCommercial(Commercial $commercial): self
+    {
+        if (!$this->commercials->contains($commercial)) {
+            $this->commercials[] = $commercial;
+            $commercial->setStatus($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCommercial(Commercial $commercial): self
+    {
+        if ($this->commercials->contains($commercial)) {
+            $this->commercials->removeElement($commercial);
+            // set the owning side to null (unless already changed)
+            if ($commercial->getStatus() === $this) {
+                $commercial->setStatus(null);
+            }
+        }
 
         return $this;
     }

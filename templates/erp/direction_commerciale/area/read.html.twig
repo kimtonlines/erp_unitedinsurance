@@ -40,8 +40,8 @@
                             <tr role="row">
                                 <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="N°: activate to sort column descending" style="width: 10px;">N°</th>
                                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Code: activate to sort column ascending" style="width: 10px;">Zone</th>
-                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Commune: activate to sort column ascending" style="width: 10px;">Commune</th>
-                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Quartier: activate to sort column ascending" style="width: 10px;">Quartier</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Commune: activate to sort column ascending" style="width: 10px;">Code - Commune</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Quartier: activate to sort column ascending" style="width: 10px;">Code - Quartier</th>
                                 <th style="width: 2px;">Action</th>
                             </tr>
                             </thead>
@@ -49,8 +49,8 @@
                                 <tr>
                                     <td>{{ loop.index }}</td>
                                     <td>{{ area.code }}</td>
-                                    <td>{% if area.township %} {{ area.township.name }} {% endif %}</td>
-                                    <td>{% if area.ward %} {{ area.ward.name }} {% endif %}</td>
+                                    <td>{% if area.township %} {{ area.township.code }} - {{ area.township.name }} {% endif %}</td>
+                                    <td>{% if area.ward %} {{ area.ward.code }} - {{ area.ward.name }} {% endif %}</td>
                                     <td>
                                         <form action="{{ url('ward_update', {'slug': area.ward.slug}) }}">
                                             <button class="btn btn-warning">Modifier</button>

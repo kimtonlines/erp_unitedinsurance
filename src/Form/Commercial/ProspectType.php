@@ -2,6 +2,7 @@
 
 namespace App\Form\Commercial;
 
+use App\Entity\Commercial\Area;
 use App\Entity\Commercial\Prospect;
 use App\Entity\Commercial\ProspectingSheet;
 use App\Entity\Commercial\TypeContract;
@@ -49,17 +50,17 @@ class ProspectType extends AbstractType
             ])
             ->add('prospectingType', EntityType::class, [
                 'class' => TypeProspection::class,
-                'choice_label' => 'nom',
+                'choice_label' => 'code',
                 'label' => false
             ])
             ->add('typeContract', EntityType::class, [
                 'class' => TypeContract::class,
-                'choice_label' => 'name',
+                'choice_label' => 'code',
                 'label' => false
             ])
-            ->add('ward', EntityType::class, [
-                'class' => Ward::class,
-                'choice_label' => 'name',
+            ->add('area', EntityType::class, [
+                'class' => Area::class,
+                'choice_label' => 'code',
                 'label' => false
             ])
         ;

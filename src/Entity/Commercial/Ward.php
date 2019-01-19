@@ -49,20 +49,11 @@ class Ward
     private $slug;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Commercial\Township", inversedBy="wards")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Commercial\Township", inversedBy="wards", fetch="EAGER")
      * @ORM\JoinColumn(onDelete="SET NULL")
      */
     private $township;
 
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Commercial\Prospect", mappedBy="ward")
-     */
-    private $prospects;
-
-    public function __construct()
-    {
-        $this->prospects = new ArrayCollection();
-    }
 
     public function getId(): ?int
     {
@@ -113,34 +104,4 @@ class Ward
         return $this;
     }
 
-    /**
-     * @return Collection|Prospect[]
-     */
-    public function getProspects(): Collection
-    {
-        return $this->prospects;
-    }
-
-    public function addProspect(Prospect $prospect): self
-    {
-        if (!$this->prospects->contains($prospect)) {
-            $this->prospects[] = $prospect;
-            $prospect->setWard($this);
-        }
-
-        return $this;
-    }
-
-    public function removeProspect(Prospect $prospect): self
-    {
-        if ($this->prospects->contains($prospect)) {
-            $this->prospects->removeElement($prospect);
-            // set the owning side to null (unless already changed)
-            if ($prospect->getWard() === $this) {
-                $prospect->setWard(null);
-            }
-        }
-
-        return $this;
-    }
 }

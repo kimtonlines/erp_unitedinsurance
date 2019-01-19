@@ -91,34 +91,34 @@ class Prospect
     private $slug;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Commercial\ProspectingSheet", inversedBy="prospects")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Commercial\ProspectingSheet", inversedBy="prospects", fetch="EAGER")
      * @ORM\JoinColumn(onDelete="SET NULL")
      */
     private $prospectingSheet;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Commercial\TypeProspection", inversedBy="prospects")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Commercial\TypeProspection", inversedBy="prospects", fetch="EAGER")
      * @ORM\JoinColumn(onDelete="SET NULL")
      */
     private $prospectingType;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Commercial\TypeContract", inversedBy="prospects")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Commercial\TypeContract", inversedBy="prospects", fetch="EAGER")
      * @ORM\JoinColumn(onDelete="SET NULL")
      */
     private $typeContract;
-
-    /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Commercial\Ward", inversedBy="prospects")
-     * * @ORM\JoinColumn(onDelete="SET NULL")
-     */
-    private $ward;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="prospects")
      * @ORM\JoinColumn(onDelete="SET NULL")
      */
     private $user;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Commercial\Area", inversedBy="prospects", fetch="EAGER")
+     * @ORM\JoinColumn(onDelete="SET NULL")
+     */
+    private $area;
 
     public function getId(): ?int
     {
@@ -275,18 +275,6 @@ class Prospect
         return $this;
     }
 
-    public function getWard(): ?Ward
-    {
-        return $this->ward;
-    }
-
-    public function setWard(?Ward $ward): self
-    {
-        $this->ward = $ward;
-
-        return $this;
-    }
-
     public function getUser(): ?User
     {
         return $this->user;
@@ -295,6 +283,18 @@ class Prospect
     public function setUser(?User $user): self
     {
         $this->user = $user;
+
+        return $this;
+    }
+
+    public function getArea(): ?Area
+    {
+        return $this->area;
+    }
+
+    public function setArea(?Area $area): self
+    {
+        $this->area = $area;
 
         return $this;
     }

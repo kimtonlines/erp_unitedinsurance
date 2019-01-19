@@ -44,18 +44,20 @@ class TypeContractController extends AbstractController
             if (!$typeContract->getCode()) {
                 $typeContractId = $typeContractRepository->findOneBy(array(), array('id' => 'desc'));
 
+
                 if ($typeContractId) {
-                    $nombre = $typeContractId->getId() + 1;
-                    if ($typeContractId->getId()  < 9 ) {
-                        $code = "TC-00".$nombre;
-                    } elseif ($typeContractId->getId()  < 99) {
-                        $code = "TC-0".$nombre;
-                    } else {
-                        $code = "TC-".$nombre;
+
+                    $code = $typeContractId->getCode() + 1;
+
+                    if ($code < 10) {
+                        $code = "0" . $code;
                     }
+
                 } else {
-                    $code = "TC-001";
+
+                    $code = "01";
                 }
+
                 $typeContract->setCode($code);
             }
 

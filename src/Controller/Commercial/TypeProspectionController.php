@@ -44,17 +44,18 @@ class TypeProspectionController extends AbstractController
                 $typeProspectionId = $typeProspectionRepository->findOneBy(array(), array('id' => 'desc'));
 
                 if ($typeProspectionId) {
-                    $nombre = $typeProspectionId->getId() + 1;
-                    if ($typeProspectionId->getId()  < 9 ) {
-                        $code = "TP-00".$nombre;
-                    } elseif ($typeProspectionId->getId()  < 99) {
-                        $code = "TP-0".$nombre;
-                    } else {
-                        $code = "TP-".$nombre;
-                    }
+
+                    $code = $typeProspectionId->getCode() + 1;
+
+                        if ($code < 10) {
+                            $code = "0" . $code;
+                        }
+
                 } else {
-                    $code = "TP-001";
+
+                    $code = "01";
                 }
+
                 $tpProspection->setCode($code);
             }
 

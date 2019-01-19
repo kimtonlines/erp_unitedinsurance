@@ -19,7 +19,7 @@ class AreaController extends AbstractController
      * @return Response
      * @Route("/lister-zone", name="area_read")
      */
-    public function areaRead(AreaRepository $areaRepository): Response
+    public function read(AreaRepository $areaRepository): Response
     {
         $areas = $areaRepository->findAll();
         return $this->render('erp/direction_commerciale/area/read.html.twig', [

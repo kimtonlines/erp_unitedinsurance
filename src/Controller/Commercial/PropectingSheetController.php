@@ -52,15 +52,17 @@ class PropectingSheetController extends AbstractController
 
                     /** @var ProspectingSheet $lastOfProspectingSheetInCommercial */
                     $lastOfProspectingSheetInCommercial = $prospectingSheet->getCommercial()->getProspectingSheets()->last();
+                    $date = new DateTime('now');
+                    $format = $date->format("y-m");
 
                     if ($lastOfProspectingSheetInCommercial) {
-                        $code = $lastOfProspectingSheetInCommercial->getCode() + 1;
+                        $newCode = $lastOfProspectingSheetInCommercial->getCode() + 1;
 
-                        if ($code < 10) {
-                            $code = "0" . $code;
+                        if ($newCode < 10) {
+                            $code = $format."-0".$newCode;
                         }
                     } else {
-                        $code = "01";
+                        $code = $format."01";
                 }
 
                 }

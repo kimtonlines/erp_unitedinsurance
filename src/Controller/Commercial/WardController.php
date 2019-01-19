@@ -68,6 +68,7 @@ class WardController extends AbstractController
 
                 $area = new Area();
                 $area->setCode($ward->getTownship()->getCode().$ward->getCode());
+                $area->setName($ward->getTownship()->getName().'-'.$ward->getName());
                 $area->setTownship($ward->getTownship());
                 $area->setWard($ward);
 

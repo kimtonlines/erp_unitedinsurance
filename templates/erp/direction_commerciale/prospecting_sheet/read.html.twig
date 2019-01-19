@@ -113,8 +113,8 @@
                                             </button>
                                             <ul class="dropdown-menu" role="menu">
                                                 <li><a href="#">Voir</a></li>
-                                                <li><a href="{{ url('prospecting_sheet_one_pdf', {'slug': prospectingSheet.slug}) }}" method="post" data-confirmation="true">
-                                                   Imprimer
+                                                <li><a href="{{ url('prospecting_sheet_one_pdf', {'slug': prospectingSheet.slug}) }}" target="_blank" method="post" data-confirmation="true">
+                                                   Imprimer <i class="fa fa-print"></i>
                                                     </a></li>
                                             </ul>
                                         </div>

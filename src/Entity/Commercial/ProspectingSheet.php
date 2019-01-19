@@ -52,7 +52,7 @@ class ProspectingSheet
     private $slug;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Commercial\Commercial", inversedBy="prospectingSheets")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Commercial\Commercial", inversedBy="prospectingSheets", fetch="EAGER")
      * @ORM\JoinColumn(onDelete="SET NULL")
      */
     private $commercial;
@@ -63,7 +63,7 @@ class ProspectingSheet
     private $prospects;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="prospectingSheets")
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="prospectingSheets", fetch="EAGER")
      * @ORM\JoinColumn(onDelete="SET NULL")
      */
     private $user;

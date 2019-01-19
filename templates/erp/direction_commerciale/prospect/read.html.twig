@@ -35,14 +35,14 @@
            <table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
                             <thead>
                             <tr role="row">
-                                <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="N°: activate to sort column descending" style="width: 169px;">N°</th>
-                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Code: activate to sort column ascending" style="width: 208px;">Code</th>
-                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Type de Prospection: activate to sort column ascending" style="width: 185px;">Type de Prospection</th>
-                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Nom ou Raison Sociale: activate to sort column ascending" style="width: 104px;">Nom ou Raison Sociale</th>
-                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Type de Contrat: activate to sort column ascending" style="width: 104px;">Type de Contrat</th>
+                                <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="N°: activate to sort column descending" style="width: 5px;">N°</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Code: activate to sort column ascending" style="width: 5px;">Code</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Type de Prospection: activate to sort column ascending" style="width: 185px;">Prospection</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Nom ou Raison Sociale: activate to sort column ascending" style="width: 104px;">Nom</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Type de Contrat: activate to sort column ascending" style="width: 104px;">Contrat</th>
                                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Zone: activate to sort column ascending" style="width: 104px;">Zone</th>
                                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Téléphone: activate to sort column ascending" style="width: 104px;">Téléphone</th>
-                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Crée par: activate to sort column ascending" style="width: 104px;">Crée par</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Crée par: activate to sort column ascending" style="width: 104px;">Utilisateur</th>
                                 <th style="width: 5px;">Action</th>
                             </tr>
                             </thead>
@@ -53,7 +53,7 @@
                                     <td>  {% if prospect.prospectingType %} {{ prospect.prospectingType.nom }} {% endif %}</td>
                                     <td>{{ prospect.name }}</td>
                                     <td> {% if prospect.typeContract %} {{ prospect.typeContract.name }} {% endif %}</td>
-                                    <td>{% if prospect.ward.township %} {{ prospect.ward.township.code }}{{ prospect.ward.code }} {% endif %}</td>
+                                    <td>{% if prospect.area %} {{ prospect.area.name}} {% endif %}</td>
                                     <td>{{ prospect.phone }}</td>
                                     <td>{{ prospect.user.name }}</td>
                                     <td>

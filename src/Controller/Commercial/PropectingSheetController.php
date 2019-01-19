@@ -47,18 +47,22 @@ class PropectingSheetController extends AbstractController
             if (!$prospectingSheet->getCode()) {
 
                 $prospectingSheetId = $prospectingSheetRepository->findOneBy(array(), array('id' => 'desc'));
-                $date = new DateTime();
-                $date->format('Y-m');
 
                 if ($prospectingSheetId) {
-                    $nombre = $prospectingSheetId->getId() + 1;
-                    if ($prospectingSheetId->getId() < 9) {
-                        $code = $date->format('Y-m')."-N°0".$nombre;
+
+                    /** @var ProspectingSheet $lastOfProspectingSheetInCommercial */
+                    $lastOfProspectingSheetInCommercial = $prospectingSheet->getCommercial()->getProspectingSheets()->last();
+
+                    if ($lastOfProspectingSheetInCommercial) {
+                        $code = $lastOfProspectingSheetInCommercial->getCode() + 1;
+
+                        if ($code < 10) {
+                            $code = "0" . $code;
+                        }
                     } else {
-                        $code = $date->format('Y-m')."-N°0".$nombre;
-                    }
-                } else {
-                    $code = $code = $date->format('Y-m')."-N°01";
+                        $code = "01";
+                }
+
                 }
 
                 $prospectingSheet->setCode($code);

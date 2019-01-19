@@ -40,7 +40,8 @@
                             <tr role="row">
                                 <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="N°: activate to sort column descending" style="width: 10px;">N°</th>
                                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Code: activate to sort column ascending" style="width: 10px;">Code</th>
-                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Nom: activate to sort column ascending" style="width: 10px;">Nom</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Nom: activate to sort column ascending" style="width: 10px;">Quartier</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Nom: activate to sort column ascending" style="width: 10px;">Commune</th>
                                 <th style="width: 2px;">Action</th>
                             </tr>
                             </thead>
@@ -49,6 +50,7 @@
                                     <td>{{ loop.index }}</td>
                                     <td>{{ ward.code }}</td>
                                     <td>{{ ward.name }}</td>
+                                    <td>{% if ward.township %} {{ ward.township.code }} - {{ ward.township.name }} {% endif %}</td>
                                     <td>
                                         <form action="{{ url('ward_update', {'slug': ward.slug}) }}">
                                             <button class="btn btn-warning">Modifier</button>

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fb6a74da-4c1e-4ef2-b637-be823695d450" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Commercial/PropectingSheetController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Commercial/PropectingSheetController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Commercial/WardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Commercial/WardController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Commercial/Prospect.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Commercial/Prospect.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Commercial/ProspectingSheet.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Commercial/ProspectingSheet.php" afterDir="false" />
@@ -10,6 +11,7 @@
       <change beforePath="$PROJECT_DIR$/templates/components/sidebar-wrapper.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/sidebar-wrapper.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/erp/direction_commerciale/prospect/read.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/erp/direction_commerciale/prospect/read.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/erp/direction_commerciale/ward/area_read.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/erp/direction_commerciale/ward/area_read.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/erp/direction_commerciale/ward/read.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/erp/direction_commerciale/ward/read.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,23 +39,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/Commercial/WardController.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Controller/Commercial/PropectingSheetController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="53" column="37" selection-start-line="53" selection-start-column="37" selection-end-line="53" selection-end-column="37" />
+            <state relative-caret-position="466">
+              <caret line="64" column="20" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
               <folding>
-                <element signature="e#45#76#0#PHP" expanded="true" />
+                <element signature="e#45#88#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Entity/Commercial/Ward.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/Commercial/WardController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="161">
-              <caret line="13" column="74" selection-start-line="13" selection-start-column="74" selection-end-line="13" selection-end-column="74" />
+              <caret line="47" column="45" selection-start-line="47" selection-start-column="45" selection-end-line="47" selection-end-column="45" />
+              <folding>
+                <element signature="e#45#76#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -127,7 +132,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/Form/Commercial/TownshipType.php" />
         <option value="$PROJECT_DIR$/templates/erp/direction_commerciale/township/create_update.html.twig" />
-        <option value="$PROJECT_DIR$/templates/erp/direction_commerciale/ward/read.html.twig" />
         <option value="$PROJECT_DIR$/src/Form/Commercial/WardType.php" />
         <option value="$PROJECT_DIR$/templates/erp/direction_commerciale/area/read.html.twig" />
         <option value="$PROJECT_DIR$/config/packages/framework.yaml" />
@@ -162,7 +166,6 @@
         <option value="$PROJECT_DIR$/templates/erp/direction_commerciale/prospecting_sheet/read.html.twig" />
         <option value="$PROJECT_DIR$/templates/erp/direction_commerciale/prospecting_sheet/prospecting_sheet_one_pdf.twig" />
         <option value="$PROJECT_DIR$/config/packages/knp_snappy.yaml" />
-        <option value="$PROJECT_DIR$/src/Controller/Commercial/PropectingSheetController.php" />
         <option value="$PROJECT_DIR$/templates/erp/direction_commerciale/prospecting_sheet/prospecting_sheet_one_pdf.html.twig" />
         <option value="$PROJECT_DIR$/templates/security/login.html.twig" />
         <option value="$PROJECT_DIR$/templates/components/sidebar-wrapper.html.twig" />
@@ -176,6 +179,8 @@
         <option value="$PROJECT_DIR$/templates/erp/direction_commerciale/ward/area_read.html.twig" />
         <option value="$PROJECT_DIR$/src/Controller/Commercial/WardController.php" />
         <option value="$PROJECT_DIR$/src/Entity/Commercial/Ward.php" />
+        <option value="$PROJECT_DIR$/templates/erp/direction_commerciale/ward/read.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/Commercial/PropectingSheetController.php" />
       </list>
     </option>
   </component>
@@ -453,12 +458,12 @@
       <workItem from="1546956286313" duration="16000" />
       <workItem from="1547478708584" duration="5562000" />
       <workItem from="1547548218510" duration="326000" />
-      <workItem from="1547901522163" duration="5247000" />
+      <workItem from="1547901522163" duration="6584000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="184105000" />
+    <option name="totallyTimeSpent" value="185442000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
@@ -510,16 +515,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Controller/Commercial/TypeProspectionController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-          <folding>
-            <element signature="e#45#87#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/symfony/security-core/Exception/CustomUserMessageAuthenticationException.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
@@ -787,16 +782,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/Commercial/PropectingSheetController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="153" column="27" selection-start-line="153" selection-start-column="27" selection-end-line="153" selection-end-column="27" />
-          <folding>
-            <element signature="e#45#88#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/erp/direction_commerciale/prospecting_sheet/read.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
@@ -845,20 +830,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Commercial/Township.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Commercial/ProspectingSheet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="65" column="84" selection-start-line="65" selection-start-column="84" selection-end-line="65" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Commercial/Commercial.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
@@ -894,20 +865,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/Commercial/WardController.php">
+    <entry file="file://$PROJECT_DIR$/src/Entity/Commercial/Township.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="53" column="37" selection-start-line="53" selection-start-column="37" selection-end-line="53" selection-end-column="37" />
+        <state relative-caret-position="381">
+          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/erp/direction_commerciale/ward/read.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="48" column="36" lean-forward="true" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
           <folding>
-            <element signature="e#45#76#0#PHP" expanded="true" />
+            <element signature="e#12#32#0#Twig" expanded="true" />
+            <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Commercial/Ward.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
+        <state relative-caret-position="-211">
           <caret line="13" column="74" selection-start-line="13" selection-start-column="74" selection-end-line="13" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Commercial/ProspectingSheet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="65" column="84" selection-start-line="65" selection-start-column="84" selection-end-line="65" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Commercial/WardController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="47" column="45" selection-start-line="47" selection-start-column="45" selection-end-line="47" selection-end-column="45" />
+          <folding>
+            <element signature="e#45#76#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Commercial/PropectingSheetController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="64" column="20" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
+          <folding>
+            <element signature="e#45#88#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

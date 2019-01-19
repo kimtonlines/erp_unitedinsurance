@@ -45,7 +45,7 @@ class Township
 
     /**
      * @ORM\Column(unique=true)
-     * @Gedmo\Slug(fields={"code"})
+     * @Gedmo\Slug(fields={"name", "code"})
      */
     private $slug;
 
@@ -54,9 +54,15 @@ class Township
      */
     private $wards;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Commercial\Area", mappedBy="township")
+     */
+    private $areas;
+
     public function __construct()
     {
         $this->wards = new ArrayCollection();
+        $this->areas = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -121,6 +127,37 @@ class Township
             // set the owning side to null (unless already changed)
             if ($ward->getTownship() === $this) {
                 $ward->setTownship(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Area[]
+     */
+    public function getAreas(): Collection
+    {
+        return $this->areas;
+    }
+
+    public function addArea(Area $area): self
+    {
+        if (!$this->areas->contains($area)) {
+            $this->areas[] = $area;
+            $area->setTownship($this);
+        }
+
+        return $this;
+    }
+
+    public function removeArea(Area $area): self
+    {
+        if ($this->areas->contains($area)) {
+            $this->areas->removeElement($area);
+            // set the owning side to null (unless already changed)
+            if ($area->getTownship() === $this) {
+                $area->setTownship(null);
             }
         }
 

@@ -44,7 +44,7 @@ class Ward
 
     /**
      * @ORM\Column(unique=true)
-     * @Gedmo\Slug(fields={"code"})
+     * @Gedmo\Slug(fields={"name", "code"})
      */
     private $slug;
 

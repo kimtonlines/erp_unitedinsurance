@@ -2,6 +2,7 @@
 
 namespace App\Controller\Commercial;
 
+use App\Entity\Commercial\Area;
 use App\Entity\Commercial\Ward;
 use App\Form\Commercial\WardType;
 use App\Repository\Commercial\WardRepository;
@@ -65,7 +66,13 @@ class WardController extends AbstractController
 
             if (!$ward->getId()) {
 
+                $area = new Area();
+                $area->setCode($ward->getTownship()->getCode().$ward->getCode());
+                $area->setTownship($ward->getTownship());
+                $area->setWard($ward);
+
                 $objectManager->persist($ward);
+                $objectManager->persist($area);
                 $objectManager->flush();
 
                 $this->addFlash('success', "Quartier ".$ward->getCode()." crée!");
@@ -122,16 +129,16 @@ class WardController extends AbstractController
 
     }
 
-    /**
-     * @param WardRepository $wardRepository
-     * @return Response
-     * @Route("/lister-zone", name="area_read")
-     */
-    public function areaRead(WardRepository $wardRepository)
-    {
-        $wards = $wardRepository->findAll();
-        return $this->render('erp/direction_commerciale/ward/area_read.html.twig', [
-            'wards' => $wards,
-        ]);
-    }
+//    /**
+//     * @param WardRepository $wardRepository
+//     * @return Response
+//     * @Route("/lister-zone", name="area_read")
+//     */
+//    public function areaRead(WardRepository $wardRepository)
+//    {
+//        $wards = $wardRepository->findAll();
+//        return $this->render('erp/direction_commerciale/ward/area_read.html.twig', [
+//            'wards' => $wards,
+//        ]);
+//    }
 }

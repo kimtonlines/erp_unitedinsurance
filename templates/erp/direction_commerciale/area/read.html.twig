@@ -4,10 +4,10 @@
     <section class="content-header">
     <h1>
         Direction Commerciale
-        <small>Liste des Quartiers</small>
+        <small>Liste des Zones</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="#"><i class="fas fa-briefcase"></i> Quartiers</a></li>
+        <li><a href="#"><i class="fas fa-briefcase"></i> Zones</a></li>
         <li class="active">Lister</li>
     </ol>
     </section>
@@ -19,7 +19,7 @@
         <div class="box-header">
             <h3 class="box-title">
                 <div class="btn-group">
-                    <a href="{{ path('ward_create') }}"><button type="button" class="btn btn-block btn-success"><i class="fas fa-users"></i> Créer</button></a>
+                    {#<a href="{{ path('area_create') }}"><button type="button" class="btn btn-block btn-success"><i class="fas fa-users"></i> Créer</button></a>#}
                 </div>
                 <div class="btn-group">
                     <form action="#" method="post" data-confirmation="true">
@@ -39,22 +39,20 @@
                             <thead>
                             <tr role="row">
                                 <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="N°: activate to sort column descending" style="width: 10px;">N°</th>
-                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Nom: activate to sort column ascending" style="width: 5px;">Code</th>
-                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Nom: activate to sort column ascending" style="width: 10px;">Communue</th>
-                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Code: activate to sort column ascending" style="width: 5px;">Code</th>
-                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Nom: activate to sort column ascending" style="width: 10px;">Quartier</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Code: activate to sort column ascending" style="width: 10px;">Zone</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Commune: activate to sort column ascending" style="width: 10px;">Commune</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Quartier: activate to sort column ascending" style="width: 10px;">Quartier</th>
                                 <th style="width: 2px;">Action</th>
                             </tr>
                             </thead>
-                            {% for ward in wards %}
+                            {% for area in areas %}
                                 <tr>
                                     <td>{{ loop.index }}</td>
-                                    <td>{% if ward.township %} {{ ward.township.code }} {% endif %}</td>
-                                    <td>{% if ward.township %} {{ ward.township.name }} {% endif %}</td>
-                                    <td>{{ ward.code }}</td>
-                                    <td>{{ ward.name }}</td>
+                                    <td>{{ area.code }}</td>
+                                    <td>{% if area.township %} {{ area.township.name }} {% endif %}</td>
+                                    <td>{% if area.ward %} {{ area.ward.name }} {% endif %}</td>
                                     <td>
-                                        <form action="{{ url('ward_update', {'slug': ward.slug}) }}">
+                                        <form action="{{ url('ward_update', {'slug': area.ward.slug}) }}">
                                             <button class="btn btn-warning">Modifier</button>
                                         </form>
                                     </td>

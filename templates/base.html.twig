@@ -49,8 +49,12 @@
         {% block stylesheets %}{% endblock %}
     </head>
     <body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
     {# this tag only applies to the forms defined in this template #}
         {% block body %}{% endblock %}
+        <div class="control-sidebar-bg"></div>
+    </div>
+    <!-- ./wrapper -->
         {% block javascripts %}{% endblock %}
     <!-- REQUIRED JS SCRIPTS -->
 

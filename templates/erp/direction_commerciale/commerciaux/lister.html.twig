@@ -35,9 +35,10 @@
            <table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
                             <thead>
                             <tr role="row">
-                                <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="N°: activate to sort column descending" style="width: 169px;">N°</th>
+                                <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="N°: activate to sort column descending" style="width: 5px;">N°</th>
                                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Image: activate to sort column ascending" style="width: 208px;">Image</th>
-                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Code: activate to sort column ascending" style="width: 208px;">Code</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Code: activate to sort column ascending" style="width: 5px;">Code</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Code: activate to sort column ascending" style="width: 208px;">Statut</th>
                                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Nom: activate to sort column ascending" style="width: 185px;">Nom</th>
                                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Prenom: activate to sort column ascending" style="width: 104px;">Prénom</th>
                                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Sexe: activate to sort column ascending" style="width: 104px;">Sexe</th>
@@ -54,6 +55,7 @@
                                         <td><a href="{{ path('information-commerciaux', {'slug': commercial.slug}) }}"><img src="{{ asset('images/no-image-icon.png') }}" width="50" height="50" class="img-fluid" alt="Responsive image"></a></td>
                                     {% endif %}
                                     <td>{{ commercial.code }}</td>
+                                    <td>Statut</td>
                                     <td>{{ commercial.nom }}</td>
                                     <td>{{ commercial.prenom }}</td>
                                     <td>{{ commercial.sexe }}</td>

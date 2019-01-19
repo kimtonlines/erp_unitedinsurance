@@ -42,14 +42,14 @@
                 <a href="#"><i class="fas fa-briefcase"></i> <span>AGENCES</span>
                     <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
-              </span>
+                     </span>
                 </a>
                 <ul class="treeview-menu">
                     <li class="treeview">
                         <a href="#"><i class="fas fa-briefcase"></i> <span>Cocody</span>
                             <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
+                        <i class="fa fa-angle-left pull-right"></i>
+                             </span>
                         </a>
                         <ul class="treeview-menu">
                             <li class="treeview">
@@ -72,16 +72,16 @@
                             </li>
                 </ul>
             </li>
-        </ul>
+            </ul>
+
             <li class="treeview">
                 <a href="#"><i class="fas fa-sliders-h"></i> <span>REGLAGES</span>
                     <span class="pull-right-container"><i
                                 class="fa fa-angle-left pull-right"></i></span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ path('prospecting_type_read') }}"><i
-                                    class="fas fa-address-card"></i>
-                            <span>Types Prospections</span></a></li>
+                    <li><a href="{{ path('status_read') }}"><i class="fas fa-address-card"></i><span>Statut</span></a></li>
+                    <li><a href="{{ path('prospecting_type_read') }}"><i class="fas fa-address-card"></i><span>Types Prospections</span></a></li>
                     <li><a href="{{ path('type_contract_read') }}"><i
                                     class="fas fa-file-signature"></i>
                             <span>Types Contrats</span></a></li>
@@ -101,6 +101,7 @@
                     </li>
                 </ul>
             </li>
+        </ul>
         <!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->

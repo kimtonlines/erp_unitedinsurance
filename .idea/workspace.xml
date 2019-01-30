@@ -38,97 +38,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/Commercial/StatusController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2783">
-              <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
-              <folding>
-                <element signature="e#45#78#0#PHP" expanded="true" />
-                <element signature="e#2428#2443#0#PHP" expanded="true" />
-                <element signature="e#2518#2576#0#PHP" expanded="true" />
-                <element signature="e#2942#2991#0#PHP" expanded="true" />
-                <element signature="e#3595#3608#1#PHP" expanded="true" />
-                <element signature="e#3957#3970#1#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Form/Commercial/CommercialType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="65" column="48" selection-start-line="65" selection-start-column="48" selection-end-line="65" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/erp/direction_commerciale/commerciaux/lister.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
-              <caret line="61" column="96" selection-start-line="61" selection-start-column="96" selection-end-line="61" selection-end-column="96" />
-              <folding>
-                <element signature="e#12#32#0#Twig" expanded="true" />
-                <element signature="e#1561#1580#0#HTML" expanded="true" />
-                <element signature="e#1757#1778#0#HTML" expanded="true" />
-                <element signature="e#2963#2984#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/Commercial/Commercial.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1916">
-              <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Form/Commercial/WardType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="26" column="14" lean-forward="true" selection-start-line="21" selection-start-column="12" selection-end-line="26" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Form/Commercial/StatusType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/erp/direction_commerciale/commerciaux/enregistrer.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
-              <caret line="126" column="22" selection-start-line="126" selection-start-column="22" selection-end-line="126" selection-end-column="22" />
-              <folding>
-                <element signature="e#12#32#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/Commercial/TypeContractController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="16" column="52" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -387,109 +297,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="erp_unitedinsurance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="erp_unitedinsurance" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="erp_unitedinsurance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="erp_unitedinsurance" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="erp_unitedinsurance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="erp_unitedinsurance" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="erp_unitedinsurance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="erp_unitedinsurance" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-              <item name="Commercial" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="erp_unitedinsurance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="erp_unitedinsurance" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="erp_unitedinsurance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="erp_unitedinsurance" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Entity" type="462c0819:PsiDirectoryNode" />
-              <item name="Commercial" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="erp_unitedinsurance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="erp_unitedinsurance" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Form" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="erp_unitedinsurance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="erp_unitedinsurance" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Form" type="462c0819:PsiDirectoryNode" />
-              <item name="Commercial" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="erp_unitedinsurance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="erp_unitedinsurance" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="erp_unitedinsurance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="erp_unitedinsurance" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="erp_unitedinsurance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="erp_unitedinsurance" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="erp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="erp_unitedinsurance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="erp_unitedinsurance" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="erp" type="462c0819:PsiDirectoryNode" />
-              <item name="direction_commerciale" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="erp_unitedinsurance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="erp_unitedinsurance" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="erp" type="462c0819:PsiDirectoryNode" />
-              <item name="direction_commerciale" type="462c0819:PsiDirectoryNode" />
-              <item name="commerciaux" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="erp_unitedinsurance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="erp_unitedinsurance" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="erp" type="462c0819:PsiDirectoryNode" />
-              <item name="direction_commerciale" type="462c0819:PsiDirectoryNode" />
-              <item name="status" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="erp_unitedinsurance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="erp_unitedinsurance" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="erp" type="462c0819:PsiDirectoryNode" />
-              <item name="direction_commerciale" type="462c0819:PsiDirectoryNode" />
-              <item name="township" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -556,16 +364,15 @@
       <workItem from="1547478708584" duration="5562000" />
       <workItem from="1547548218510" duration="326000" />
       <workItem from="1547901522163" duration="7437000" />
-      <workItem from="1547911427351" duration="14222000" />
+      <workItem from="1547911427351" duration="14282000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="200517000" />
+    <option name="totallyTimeSpent" value="200577000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26932272" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -932,13 +739,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/Commercial/TypeContractController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="16" column="52" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/erp/direction_commerciale/status/create_update.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
@@ -952,21 +752,6 @@
             <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="e#4442#4455#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/Commercial/StatusController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2783">
-          <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
-          <folding>
-            <element signature="e#45#78#0#PHP" expanded="true" />
-            <element signature="e#2428#2443#0#PHP" expanded="true" />
-            <element signature="e#2518#2576#0#PHP" expanded="true" />
-            <element signature="e#2942#2991#0#PHP" expanded="true" />
-            <element signature="e#3595#3608#1#PHP" expanded="true" />
-            <element signature="e#3957#3970#1#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1010,6 +795,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/Commercial/CommercialType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="59" column="27" selection-start-line="59" selection-start-column="27" selection-end-line="59" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Commercial/StatusController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2783">
+          <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
+          <folding>
+            <element signature="e#45#78#0#PHP" expanded="true" />
+            <element signature="e#2428#2443#0#PHP" expanded="true" />
+            <element signature="e#2518#2576#0#PHP" expanded="true" />
+            <element signature="e#2942#2991#0#PHP" expanded="true" />
+            <element signature="e#3595#3608#1#PHP" expanded="true" />
+            <element signature="e#3957#3970#1#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/erp/direction_commerciale/commerciaux/lister.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="61" column="96" selection-start-line="61" selection-start-column="96" selection-end-line="61" selection-end-column="96" />
+          <folding>
+            <element signature="e#12#32#0#Twig" expanded="true" />
+            <element signature="e#1561#1580#0#HTML" expanded="true" />
+            <element signature="e#1757#1778#0#HTML" expanded="true" />
+            <element signature="e#2963#2984#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Commercial/Commercial.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1916">
+          <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Form/Commercial/WardType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
@@ -1034,30 +861,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Commercial/Commercial.php">
+    <entry file="file://$PROJECT_DIR$/src/Controller/Commercial/TypeContractController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1916">
-          <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/erp/direction_commerciale/commerciaux/lister.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="61" column="96" selection-start-line="61" selection-start-column="96" selection-end-line="61" selection-end-column="96" />
-          <folding>
-            <element signature="e#12#32#0#Twig" expanded="true" />
-            <element signature="e#1561#1580#0#HTML" expanded="true" />
-            <element signature="e#1757#1778#0#HTML" expanded="true" />
-            <element signature="e#2963#2984#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/Commercial/CommercialType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="65" column="48" selection-start-line="65" selection-start-column="48" selection-end-line="65" selection-end-column="48" />
+        <state relative-caret-position="182">
+          <caret line="16" column="52" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="52" />
         </state>
       </provider>
     </entry>

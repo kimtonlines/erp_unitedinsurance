@@ -15,7 +15,6 @@ use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\Commercial\ProspectRepository")
- * @UniqueEntity("code")
  * @UniqueEntity("phone")
  * @UniqueEntity("email")
  * @Vich\Uploadable

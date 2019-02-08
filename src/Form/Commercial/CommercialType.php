@@ -12,6 +12,7 @@ use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use App\Entity\Commercial\Agency;
 
 class CommercialType extends AbstractType
 {
@@ -21,6 +22,12 @@ class CommercialType extends AbstractType
             ->add('imageFile', FileType::class, [
                 'required' => false,
                 'label' => false
+            ])
+            ->add('agency', EntityType::class, [
+                'class' => Agency::class,
+                'choice_label' => 'name',
+                'label' => false
+    
             ])
             ->add('nom', TextType::class, [
                 'label' => false,

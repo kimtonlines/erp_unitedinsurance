@@ -16,7 +16,6 @@ use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\Commercial\CommercialRepository")
- * @UniqueEntity("code")
  * @UniqueEntity("telephone")
  * @UniqueEntity("email")
  * @Vich\Uploadable
@@ -37,7 +36,7 @@ class Commercial
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255, unique=true);
+     * @ORM\Column(type="string", length=255);
      */
     private $code;
 
@@ -121,6 +120,11 @@ class Commercial
      * @ORM\ManyToOne(targetEntity="App\Entity\Commercial\Status", inversedBy="commercials")
      */
     private $status;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Commercial\Agency", inversedBy="commercials")
+     */
+    private $agency;
 
     public function __construct()
     {
@@ -328,6 +332,18 @@ class Commercial
     public function setStatus(?Status $status): self
     {
         $this->status = $status;
+
+        return $this;
+    }
+
+    public function getAgency(): ?Agency
+    {
+        return $this->agency;
+    }
+
+    public function setAgency(?Agency $agency): self
+    {
+        $this->agency = $agency;
 
         return $this;
     }

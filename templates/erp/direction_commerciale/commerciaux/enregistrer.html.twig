@@ -64,6 +64,12 @@
                         </div>
                     </div>
                     {% endif %}
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label><i class="fas fa-city"></i> Agence <i class="fa fa-exclamation-triangle" style="color: #dd4b39;"></i></label>
+                            {{ form_row(form.agency, {attr: {'class': 'form-control select2'} }) }}
+                        </div>
+                    </div>
                     <div class="col-sm-2">
                         <div class="form-group">
                             <label>Sexe <i class="fa fa-exclamation-triangle" style="color: #dd4b39;"></i></label>

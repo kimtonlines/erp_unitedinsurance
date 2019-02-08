@@ -2,6 +2,8 @@
 
 namespace App\Entity\Commercial;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Gedmo\Timestampable\Traits\TimestampableEntity;
@@ -47,6 +49,16 @@ class Agency
      * @ORM\JoinColumn(nullable=false)
      */
     private $township;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Commercial\Commercial", mappedBy="agency")
+     */
+    private $commercials;
+
+    public function __construct()
+    {
+        $this->commercials = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -94,6 +106,37 @@ class Agency
     public function setTownship(Township $township): self
     {
         $this->township = $township;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Commercial[]
+     */
+    public function getCommercials(): Collection
+    {
+        return $this->commercials;
+    }
+
+    public function addCommercial(Commercial $commercial): self
+    {
+        if (!$this->commercials->contains($commercial)) {
+            $this->commercials[] = $commercial;
+            $commercial->setAgency($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCommercial(Commercial $commercial): self
+    {
+        if ($this->commercials->contains($commercial)) {
+            $this->commercials->removeElement($commercial);
+            // set the owning side to null (unless already changed)
+            if ($commercial->getAgency() === $this) {
+                $commercial->setAgency(null);
+            }
+        }
 
         return $this;
     }

@@ -48,20 +48,27 @@ class CommercialController extends AbstractController
             if (!$commercial->getCode()) {
                 $commerciauxId = $commercialRepository->findOneBy(array(), array('id' => 'desc'));
 
+                
                 if ($commerciauxId) {
-                    $nombre = $commerciauxId->getId() + 1;
-                    if ($commerciauxId->getId()  < 9 ) {
-                        $code = "COM-ABJ-00".$nombre;
-                    } elseif ($commerciauxId->getId()  < 99) {
-                        $code = "COM-ABJ-0".$nombre;
+                    /** @var Ward $lastOfWardsInTownship */
+                    $lastOfCommercialsInAgency = $commercial->getAgency()->getcommercials()->last();
+
+                    if ($lastOfCommercialsInAgency) {
+                        $code = $lastOfCommercialsInAgency->getCode() + 1;
+
+                        if ($code < 10) {
+                            $code = "0" . $code;
+                        }
+                    } elseif (!$lastOfCommercialsInAgency) {
+                        $code = "01";
                     } else {
-                        $code = "COM-ABJ-".$nombre;
-                    }
-                } else {
-                    $code = "COM-ABJ-001";
+                    $code = "01";
                 }
+                }
+
                 $commercial->setCode($code);
-            }
+            } 
+
 
             if (!$commercial->getId()) {
 

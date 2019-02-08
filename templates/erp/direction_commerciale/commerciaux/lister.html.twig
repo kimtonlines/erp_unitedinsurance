@@ -42,6 +42,7 @@
                                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Prenom: activate to sort column ascending" style="width: 104px;">Prénom</th>
                                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Téléphone: activate to sort column ascending" style="width: 104px;">Téléphone</th>
                                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Code: activate to sort column ascending" style="width: 208px;">Statut</th>
+                                <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Code: activate to sort column ascending" style="width: 208px;">Agence</th>
                                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Code: activate to sort column ascending" style="width: 208px;">Salarié</th>
                                 <th style="width: 5px;">Action</th>
                             </tr>
@@ -59,6 +60,7 @@
                                     <td>{{ commercial.prenom }}</td>
                                     <td>{{ commercial.telephone }}</td>
                                     <td>{% if commercial.status %} {{ commercial.status.name }} {% endif %}</td>
+                                    <td>{% if commercial.agency %} {{ commercial.agency.name }} {% else %} Freelance {% endif %}</td>
                                     <td>{% if commercial.salaried %} Oui {% else %} Non {% endif %}</td>
                                     <td>
                                         {#<div class="btn-group">#}

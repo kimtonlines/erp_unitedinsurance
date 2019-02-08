@@ -59,6 +59,11 @@ class Township
      */
     private $areas;
 
+    /**
+     * @ORM\OneToOne(targetEntity="App\Entity\Commercial\Agency", mappedBy="township", cascade={"persist", "remove"})
+     */
+    private $agency;
+
     public function __construct()
     {
         $this->wards = new ArrayCollection();
@@ -159,6 +164,23 @@ class Township
             if ($area->getTownship() === $this) {
                 $area->setTownship(null);
             }
+        }
+
+        return $this;
+    }
+
+    public function getAgency(): ?Agency
+    {
+        return $this->agency;
+    }
+
+    public function setAgency(Agency $agency): self
+    {
+        $this->agency = $agency;
+
+        // set the owning side of the relation if necessary
+        if ($this !== $agency->getTownship()) {
+            $agency->setTownship($this);
         }
 
         return $this;

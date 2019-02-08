@@ -14,3 +14,7 @@ vich_uploader:
             uri_prefix: /images/direction_commerciale/prospect
             upload_destination: '%kernel.project_dir%/public/images/direction_commerciale/prospect'
             namer: Vich\UploaderBundle\Naming\UniqidNamer
+        city_image:
+            uri_prefix: /images/direction_commerciale/city
+            upload_destination: '%kernel.project_dir%/public/images/direction_commerciale/city'
+            namer: Vich\UploaderBundle\Naming\UniqidNamer

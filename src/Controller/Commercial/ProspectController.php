@@ -43,17 +43,21 @@ class ProspectController extends AbstractController
                 $prospectId = $prospectRepository->findOneBy(array(), array('id' => 'desc'));
 
                 if ($prospectId) {
-                    $nombre = $prospectId->getId() + 1;
-                    if ($prospectId->getId()  < 9 ) {
-                        $code = "PROS-ABJ-00".$nombre;
-                    } elseif ($prospectId->getId()  < 99) {
-                        $code = "PROS-ABJ-0".$nombre;
-                    } else {
-                        $code = "PROS-ABJ-".$nombre;
-                    }
+                    /** @var Ward $lastOfWardsInTownship */
+                    $lastOfProspectsInProspectingSheet = $prospect->getProspectingSheet()->getProspects()->last();
+
+                    if ($lastOfProspectsInProspectingSheet) {
+                        $code = $lastOfProspectsInProspectingSheet->getCode() + 1;
+
+                        if ($code < 10) {
+                            $code = "0" . $code;
+                        }
+                    } 
+
                 } else {
-                    $code = "PROS-ABJ-001";
+                    $code = "01";
                 }
+
                 $prospect->setCode($code);
             }
 

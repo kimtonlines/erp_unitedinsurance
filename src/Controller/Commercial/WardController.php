@@ -55,10 +55,10 @@ class WardController extends AbstractController
                         if ($code < 10) {
                             $code = "0" . $code;
                         }
-                    } else {
-                        $code = "01";
-                    }
+                    } 
 
+                } else {
+                    $code = "01";
                 }
 
                 $ward->setCode($code);

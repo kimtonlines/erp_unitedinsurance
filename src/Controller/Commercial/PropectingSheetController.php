@@ -48,12 +48,13 @@ class PropectingSheetController extends AbstractController
 
                 $prospectingSheetId = $prospectingSheetRepository->findOneBy(array(), array('id' => 'desc'));
 
+                $date = new DateTime('now');
+                $format = $date->format("y-m");
+
                 if ($prospectingSheetId) {
 
                     /** @var ProspectingSheet $lastOfProspectingSheetInCommercial */
                     $lastOfProspectingSheetInCommercial = $prospectingSheet->getCommercial()->getProspectingSheets()->last();
-                    $date = new DateTime('now');
-                    $format = $date->format("y-m");
 
                     if ($lastOfProspectingSheetInCommercial) {
                         $newCode = $lastOfProspectingSheetInCommercial->getCode() + 1;
@@ -61,11 +62,11 @@ class PropectingSheetController extends AbstractController
                         if ($newCode < 10) {
                             $code = $format."-0".$newCode;
                         }
-                    } else {
-                        $code = $format."01";
-                }
+                    } 
 
-                }
+                } else {
+                    $code = $format."-01";
+            }
 
                 $prospectingSheet->setCode($code);
             }
